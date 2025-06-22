@@ -1,13 +1,8 @@
-// Architectural pattern: MVC, Dependency Injection, MVP 
-// MVC = MODEL VIEW CONTROLLER
-// Design pattern: Middleware, Decorator 
+// import moment from 'moment';        // const moment = require('moment');
 
-// console.log("EXUCUTED!");
+import dotenv from 'dotenv';
+dotenv.config();
 
-// import moment from 'moment';
+console.log("PORT:", process.env.PORT);
 
-// const currentTime = moment().format("YYYY MM DD");
-// console.log(currentTime);
-
-// const person: string = "Khizar";
-// const count:  number = 100;
+console.log("MONGO_URL:", process.env.MONGO_URL);
