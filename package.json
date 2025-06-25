@@ -2,7 +2,7 @@
   "name": "burak",
   "version": "1.0.0",
   "description": "This is burak project backend",
-  "main": "src/sever.ts",
+  "main": "src/server.ts",
   "scripts": {
     "start": "ts-node src/server.ts",
     "start:dev": "nodemon --exec ts-node src/server.ts",
