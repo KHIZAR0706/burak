@@ -1,36 +1,75 @@
+// H2-TASK
+// Masalani izohi: Shunday function tuzing, unga string argument pass bo'lsin. Function ushbu argumentdagi digitlarni yangi stringda return qilsin.
+// Masalan: getDigits("m14i1t") return qiladi "141"
+
+
+// Masalani yechimi:
+ 
+function getDigits(input: string): string {
+  let digits = '';
+  for (let char of input) {
+    if (char >= '0' && char <= '9') {
+      digits += char;
+    }
+  }
+  return digits;
+}
+
+const result1 = getDigits("m14i1t");
+console.log(result1);
+
+const result2 = getDigits("g11m3t");
+console.log(result2);
+
+const result3 = getDigits("ma19n");
+console.log(result3);
+
+const result4 = getDigits("ab15s");
+console.log(result4);
+
+const result5 = getDigits("h09w8");
+console.log(result5);
+
+const result6 = getDigits("ma06d");
+console.log(result6);
+
+const result7 = getDigits("g0i0y7");
+console.log(result7);
+
+
 // H-TASK
 // Masalani izohi: Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin.
 // Masalan: getPositive([1, -4, 2]) return qiladi "12"
 
 // Masalani yechimi:
 
-function getPositive(arr: number[]): string {
-    return arr
-        .filter((num: number) => num > 0)
-        .join(''); 
+// function getPositive(arr: number[]): string {
+//     return arr
+//         .filter((num: number) => num > 0)
+//         .join(''); 
 
-}
+// }
 
-const result1 = getPositive([0, -4, 2]);
-console.log(result1);
+// const result1 = getPositive([0, -4, 2]);
+// console.log(result1);
 
-const result2 = getPositive([1, -3, 9]);
-console.log(result2);
+// const result2 = getPositive([1, -3, 9]);
+// console.log(result2);
 
-const result3 = getPositive([1, -7, 5]);
-console.log(result3);
+// const result3 = getPositive([1, -7, 5]);
+// console.log(result3);
 
-const result4 = getPositive([7, -2, -5]);
-console.log(result4);
+// const result4 = getPositive([7, -2, -5]);
+// console.log(result4);
 
-const result5 = getPositive([-1, 0, 9]);
-console.log(result5);
+// const result5 = getPositive([-1, 0, 9]);
+// console.log(result5);
 
-const result6 = getPositive([1, 0, 3]);
-console.log(result6);
+// const result6 = getPositive([1, 0, 3]);
+// console.log(result6);
 
-const result7 = getPositive([0, -3, 6]);
-console.log(result7);
+// const result7 = getPositive([0, -3, 6]);
+// console.log(result7);
 
 // G-TASK
 // Masalani izohi: Yagona parametrga ega function tuzing.Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
