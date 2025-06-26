@@ -1,3 +1,19 @@
+/*  Project Standards:
+  - Logging standards
+  - Naming standards
+      function, method, variables => CAMEL case.  goHome
+      class => PASCAL case                         MemberService
+      folder => KEBAB case 
+      css => SNAKE case                            button_style 
+  - Error handling 
+  
+
+*/
+
+
+
+
+
 // H2-TASK
 // Masalani izohi: Shunday function tuzing, unga string argument pass bo'lsin. Function ushbu argumentdagi digitlarni yangi stringda return qilsin.
 // Masalan: getDigits("m14i1t") return qiladi "141"
