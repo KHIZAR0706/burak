@@ -7,8 +7,14 @@
       css => SNAKE case                            button_style 
   - Error handling 
   
+  */
 
-*/
+  /*
+    Traditional Api
+    Rest Api
+    GraphQL Api
+    ...
+  */
 
 
 
