@@ -1,3 +1,52 @@
+// I-TASK
+// Masalani izohi: Shunday function tuzing, u parametrdagi array ichida eng ko'p takrorlangan raqamni topib qaytarsin.
+// Masalan: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4. 
+// Yuqoridag misolda argument sifatida kiritilayotgan array tarkibida 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
+
+// Masalani yechimi:
+
+function majorityElement(arr: number[]): number {
+  let max = 0;
+  let ele = arr[0];
+
+  for (let a = 0; a < arr.length; a++) {
+    let count = 0;
+    for (let b = 0; b < arr.length; b++) {
+      if (arr[a] === arr[b]) {
+        count++;
+      }
+    }
+    if (count > max) {
+      max = count;
+      ele = arr[a];
+    }
+  }
+
+  return ele;
+}
+
+const result1 = majorityElement([1, 2, 3, 19, 5, 19, 3, 19]);
+console.log(result1)
+
+const result2 = majorityElement([3, 6, 2, 7, 5, 2, 2, 1]);
+console.log(result2);
+
+const result3 = majorityElement([7, 8, 9, 7, 10, 6, 5, 4]);
+console.log(result3);
+
+const result4 = majorityElement([9, 4, 9, 6, 9, 7, 1]);
+console.log(result4);
+
+const result5 = majorityElement([15, 20, 13, 15, 10, 15, 11]);
+console.log(result5);
+
+const result6 = majorityElement([6, 7, 6, 5, 3, 6, 4]);
+console.log(result6);
+
+const result7 = majorityElement([0, 1, 2, 0, 7, 3, 0]);
+console.log(result7);
+
+
 /*  Project Standards:
   - Logging standards
   - Naming standards
@@ -16,10 +65,6 @@
     ...
   */
 
-
-
-
-
 // H2-TASK
 // Masalani izohi: Shunday function tuzing, unga string argument pass bo'lsin. Function ushbu argumentdagi digitlarni yangi stringda return qilsin.
 // Masalan: getDigits("m14i1t") return qiladi "141"
@@ -27,36 +72,36 @@
 
 // Masalani yechimi:
  
-function getDigits(input: string): string {
-  let digits = '';
-  for (let char of input) {
-    if (char >= '0' && char <= '9') {
-      digits += char;
-    }
-  }
-  return digits;
-}
+// function getDigits(input: string): string {
+//   let digits = '';
+//   for (let char of input) {
+//     if (char >= '0' && char <= '9') {
+//       digits += char;
+//     }
+//   }
+//   return digits;
+// }
 
-const result1 = getDigits("m14i1t");
-console.log(result1);
+// const result1 = getDigits("m14i1t");
+// console.log(result1);
 
-const result2 = getDigits("g11m3t");
-console.log(result2);
+// const result2 = getDigits("g11m3t");
+// console.log(result2);
 
-const result3 = getDigits("ma19n");
-console.log(result3);
+// const result3 = getDigits("ma19n");
+// console.log(result3);
 
-const result4 = getDigits("ab15s");
-console.log(result4);
+// const result4 = getDigits("ab15s");
+// console.log(result4);
 
-const result5 = getDigits("h09w8");
-console.log(result5);
+// const result5 = getDigits("h09w8");
+// console.log(result5);
 
-const result6 = getDigits("ma06d");
-console.log(result6);
+// const result6 = getDigits("ma06d");
+// console.log(result6);
 
-const result7 = getDigits("g0i0y7");
-console.log(result7);
+// const result7 = getDigits("g0i0y7");
+// console.log(result7);
 
 
 // H-TASK
