@@ -1,3 +1,31 @@
+// J-TASK
+// Msalani izohi: Shunday function tuzing, u string qabul qilsin. Va string ichidagi eng uzun so'zni qaytarsin.
+// Masalan: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
+// Yuqoridagi text tarkibida 'Uzbekistan' eng uzun so'z bo;lganligi uchun 'Uzbekistan' ni qaytarmoqda.
+
+// Masalani yechimi:
+
+function findLongestWord(input: string): string {
+  const words = input.split(" ");
+  let longestWord = "";
+  for (const word of words) {
+    if(word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+
+const result1 = findLongestWord("I came from Uzbekistan!");
+console.log(result1);
+
+const result2 = findLongestWord("Tashkent is the capital of my country!");
+console.log(result2);
+
+const result3 = findLongestWord("I love Football!");
+console.log(result3);
+
+
 // I-TASK
 // Masalani izohi: Shunday function tuzing, u parametrdagi array ichida eng ko'p takrorlangan raqamni topib qaytarsin.
 // Masalan: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4. 
@@ -5,46 +33,46 @@
 
 // Masalani yechimi:
 
-function majorityElement(arr: number[]): number {
-  let max = 0;
-  let ele = arr[0];
+// function majorityElement(arr: number[]): number {
+//   let max = 0;
+//   let ele = arr[0];
 
-  for (let a = 0; a < arr.length; a++) {
-    let count = 0;
-    for (let b = 0; b < arr.length; b++) {
-      if (arr[a] === arr[b]) {
-        count++;
-      }
-    }
-    if (count > max) {
-      max = count;
-      ele = arr[a];
-    }
-  }
+//   for (let a = 0; a < arr.length; a++) {
+//     let count = 0;
+//     for (let b = 0; b < arr.length; b++) {
+//       if (arr[a] === arr[b]) {
+//         count++;
+//       }
+//     }
+//     if (count > max) {
+//       max = count;
+//       ele = arr[a];
+//     }
+//   }
 
-  return ele;
-}
+//   return ele;
+// }
 
-const result1 = majorityElement([1, 2, 3, 19, 5, 19, 3, 19]);
-console.log(result1)
+// const result1 = majorityElement([1, 2, 3, 19, 5, 19, 3, 19]);
+// console.log(result1)
 
-const result2 = majorityElement([3, 6, 2, 7, 5, 2, 2, 1]);
-console.log(result2);
+// const result2 = majorityElement([3, 6, 2, 7, 5, 2, 2, 1]);
+// console.log(result2);
 
-const result3 = majorityElement([7, 8, 9, 7, 10, 6, 5, 4]);
-console.log(result3);
+// const result3 = majorityElement([7, 8, 9, 7, 10, 6, 5, 4]);
+// console.log(result3);
 
-const result4 = majorityElement([9, 4, 9, 6, 9, 7, 1]);
-console.log(result4);
+// const result4 = majorityElement([9, 4, 9, 6, 9, 7, 1]);
+// console.log(result4);
 
-const result5 = majorityElement([15, 20, 13, 15, 10, 15, 11]);
-console.log(result5);
+// const result5 = majorityElement([15, 20, 13, 15, 10, 15, 11]);
+// console.log(result5);
 
-const result6 = majorityElement([6, 7, 6, 5, 3, 6, 4]);
-console.log(result6);
+// const result6 = majorityElement([6, 7, 6, 5, 3, 6, 4]);
+// console.log(result6);
 
-const result7 = majorityElement([0, 1, 2, 0, 7, 3, 0]);
-console.log(result7);
+// const result7 = majorityElement([0, 1, 2, 0, 7, 3, 0]);
+// console.log(result7);
 
 
 /*  Project Standards:
