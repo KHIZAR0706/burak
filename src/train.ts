@@ -65,6 +65,12 @@ console.log(result7);
     ...
   */
 
+  /* 
+  Traditional FD => BSSR (Admin) => EJS
+  Modern FD  => SPA (Users' application) => REACT
+  
+  */  
+
 // H2-TASK
 // Masalani izohi: Shunday function tuzing, unga string argument pass bo'lsin. Function ushbu argumentdagi digitlarni yangi stringda return qilsin.
 // Masalan: getDigits("m14i1t") return qiladi "141"
