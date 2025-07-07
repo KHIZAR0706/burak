@@ -1,3 +1,37 @@
+// K-TASK
+// Masalani izohi: Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
+// Masalan: countVowels("string") return 1;
+
+// Masalani yechimi: 
+
+function countVowels(word: string): number {
+  return Array.from(word.toLowerCase())
+  .filter(char => ['a', 'e', 'i', 'o', 'u'].includes(char))
+  .length;
+}
+
+const result1 = countVowels("NodeJS");
+console.log(result1);
+
+const result2 = countVowels("Typescript");
+console.log(result2);
+
+const result3 = countVowels("Uzbekistan");
+console.log(result3);
+
+const result4 = countVowels("JavaScript");
+console.log(result4);
+
+const result5 = countVowels("Frontend and Backend");
+console.log(result5);
+
+const result6 = countVowels("Sessions");
+console.log(result6);
+
+const result7 = countVowels("Authentication");
+console.log(result7);
+
+
 // J-TASK
 // Msalani izohi: Shunday function tuzing, u string qabul qilsin. Va string ichidagi eng uzun so'zni qaytarsin.
 // Masalan: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
@@ -5,25 +39,25 @@
 
 // Masalani yechimi:
 
-function findLongestWord(input: string): string {
-  const words = input.split(" ");
-  let longestWord = "";
-  for (const word of words) {
-    if(word.length > longestWord.length) {
-      longestWord = word;
-    }
-  }
-  return longestWord;
-}
+// function findLongestWord(input: string): string {
+//   const words = input.split(" ");
+//   let longestWord = "";
+//   for (const word of words) {
+//     if(word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
 
-const result1 = findLongestWord("I came from Uzbekistan!");
-console.log(result1);
+// const result1 = findLongestWord("I came from Uzbekistan!");
+// console.log(result1);
 
-const result2 = findLongestWord("Tashkent is the capital of my country!");
-console.log(result2);
+// const result2 = findLongestWord("Tashkent is the capital of my country!");
+// console.log(result2);
 
-const result3 = findLongestWord("I love Football!");
-console.log(result3);
+// const result3 = findLongestWord("I love Football!");
+// console.log(result3);
 
 
 // I-TASK
