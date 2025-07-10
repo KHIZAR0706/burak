@@ -1,35 +1,66 @@
+// L-TASK
+// Masalani izohi: Shunday function yozing, u string qabul qilsin va string ichidagi hamma so'zlarni chappasiga yozib va so'zlar ketma-ketligini buzmasdan stringni qaytarsin.
+// Masalan: reverseSentence("we like coding") return "ew ekil gnidoc";
+
+// Masalani yechimi:
+
+function reverseSentence(sentence: string): string {
+  return sentence
+   .split(' ')
+   .map(word => word.split('').reverse().join(''))
+   .join(' ');
+}
+
+const result1 = reverseSentence("we like coding");
+console.log(result1);
+
+const result2 = reverseSentence("Hello World");
+console.log(result2);
+
+const result3 = reverseSentence("I like playing football");
+console.log(result3);
+
+const result4 = reverseSentence("Tashkent is the capital of Uzbekistan");
+console.log(result4);
+
+const result5 = reverseSentence("NodeJS is Backend Language");
+console.log(result5);
+
+const result6 = reverseSentence("ReactJS is Frontend Library");
+console.log(result6);
+
 // K-TASK
 // Masalani izohi: Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
 // Masalan: countVowels("string") return 1;
 
 // Masalani yechimi: 
 
-function countVowels(word: string): number {
-  return Array.from(word.toLowerCase())
-  .filter(char => ['a', 'e', 'i', 'o', 'u'].includes(char))
-  .length;
-}
+// function countVowels(word: string): number {
+//   return Array.from(word.toLowerCase())
+//   .filter(char => ['a', 'e', 'i', 'o', 'u'].includes(char))
+//   .length;
+// }
 
-const result1 = countVowels("NodeJS");
-console.log(result1);
+// const result1 = countVowels("NodeJS");
+// console.log(result1);
 
-const result2 = countVowels("Typescript");
-console.log(result2);
+// const result2 = countVowels("Typescript");
+// console.log(result2);
 
-const result3 = countVowels("Uzbekistan");
-console.log(result3);
+// const result3 = countVowels("Uzbekistan");
+// console.log(result3);
 
-const result4 = countVowels("JavaScript");
-console.log(result4);
+// const result4 = countVowels("JavaScript");
+// console.log(result4);
 
-const result5 = countVowels("Frontend and Backend");
-console.log(result5);
+// const result5 = countVowels("Frontend and Backend");
+// console.log(result5);
 
-const result6 = countVowels("Sessions");
-console.log(result6);
+// const result6 = countVowels("Sessions");
+// console.log(result6);
 
-const result7 = countVowels("Authentication");
-console.log(result7);
+// const result7 = countVowels("Authentication");
+// console.log(result7);
 
 
 // J-TASK
