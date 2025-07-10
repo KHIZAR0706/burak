@@ -120,18 +120,29 @@ console.log(result7);
   
   */
 
-  /*
+  /* Request:
     Traditional Api
     Rest Api
     GraphQL Api
     ...
   */
 
-  /* 
+  /* Frontend Development:
   Traditional FD => BSSR (Admin) => EJS
   Modern FD  => SPA (Users' application) => REACT
   
-  */  
+  */ 
+ 
+  /* Cookies:
+     request join
+     self destroy  
+  */
+
+  /* Validation:
+  Frontend validation
+  Backend validation
+  Database validation
+  */   
 
 // H2-TASK
 // Masalani izohi: Shunday function tuzing, unga string argument pass bo'lsin. Function ushbu argumentdagi digitlarni yangi stringda return qilsin.
