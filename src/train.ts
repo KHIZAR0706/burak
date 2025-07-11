@@ -1,33 +1,64 @@
+// M-TASK
+// Masalani izohi:Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin va array ichidagi har bir raqam uchun raqamni ozi va hamda osha raqamni kvadratidan tashkil topgan object hosil qilib, hosil bolgan objectlarni array ichida qaytarsin.
+// Masalan: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
+
+// Masalani yechimi:
+
+function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
+  return numbers.map(num => ({ number: num, square: num * num }));
+}
+
+const result1 = getSquareNumbers([1, 2, 3]);
+console.log(result1);
+
+const result2 = getSquareNumbers([6, 5, 19]);
+console.log(result2);
+
+const result3 = getSquareNumbers([15, 2, 9]);
+console.log(result3);
+
+const result4 = getSquareNumbers([70, 15, 2]);
+console.log(result4);
+
+const result5 = getSquareNumbers([7, 13, 20]);
+console.log(result5);
+
+const result6 = getSquareNumbers([8, 4, 5]);
+console.log(result6);
+
+const result7 = getSquareNumbers([69, 70, 98]);
+console.log(result7);
+
 // L-TASK
 // Masalani izohi: Shunday function yozing, u string qabul qilsin va string ichidagi hamma so'zlarni chappasiga yozib va so'zlar ketma-ketligini buzmasdan stringni qaytarsin.
 // Masalan: reverseSentence("we like coding") return "ew ekil gnidoc";
 
 // Masalani yechimi:
 
-function reverseSentence(sentence: string): string {
-  return sentence
-   .split(' ')
-   .map(word => word.split('').reverse().join(''))
-   .join(' ');
-}
+// function reverseSentence(sentence: string): string {
+//   return sentence
+//    .split(' ')
+//    .map(word => word.split('').reverse().join(''))
+//    .join(' ');
+// }
 
-const result1 = reverseSentence("we like coding");
-console.log(result1);
+// const result1 = reverseSentence("we like coding");
+// console.log(result1);
 
-const result2 = reverseSentence("Hello World");
-console.log(result2);
+// const result2 = reverseSentence("Hello World");
+// console.log(result2);
 
-const result3 = reverseSentence("I like playing football");
-console.log(result3);
+// const result3 = reverseSentence("I like playing football");
+// console.log(result3);
 
-const result4 = reverseSentence("Tashkent is the capital of Uzbekistan");
-console.log(result4);
+// const result4 = reverseSentence("Tashkent is the capital of Uzbekistan");
+// console.log(result4);
 
-const result5 = reverseSentence("NodeJS is Backend Language");
-console.log(result5);
+// const result5 = reverseSentence("NodeJS is Backend Language");
+// console.log(result5);
 
-const result6 = reverseSentence("ReactJS is Frontend Library");
-console.log(result6);
+// const result6 = reverseSentence("ReactJS is Frontend Library");
+// console.log(result6);
 
 // K-TASK
 // Masalani izohi: Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
