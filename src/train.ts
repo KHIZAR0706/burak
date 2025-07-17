@@ -1,40 +1,71 @@
+// O-TASK
+// Masalani izohi: Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin. Va array ichidagi sonlar yig'indisini hisoblab chiqgan javobni qaytarsin
+// Masalan: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]); return 45
+// Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 hamda 35. Qolganlari nested bo'lib yoki type'lari number emas.
+
+
+// Masalani yechimi:
+
+function calculateSumOfNumbers(arr: any[]): number {
+  let sum = 0;
+
+  for (const item of arr) {
+    if (typeof item === "number") {
+      sum += item;
+    }
+  }
+
+  return sum;
+}
+
+const result1 = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
+console.log(result1); 
+
+const result2 = calculateSumOfNumbers([7, "13", { son: 10 }, true, 6]);
+console.log(result2); 
+
+const result3 = calculateSumOfNumbers([2, "21", { son: 10 }, true, 19]);
+console.log(result3); 
+
+
+
 // N-TASK
 // MAsalani izohi: Shunday function yozing, u string qabul qilsin va string palindrom yani togri oqilganda ham, orqasidan oqilganda ham bir xil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
 // Masalan: palindromCheck("dad") return true; palindromCheck("son") return false;
 
 // Masalani yechimi: 
 
-function palindromCheck(word: string): boolean {
-  const reversed = word.split('').reverse().join('');
-  return word === reversed;
-}
+// function palindromCheck(word: string): boolean {
+//   const reversed = word.split('').reverse().join('');
+//   return word === reversed;
+// }
 
-const result1 = palindromCheck("dad");
-console.log(result1);
+// const result1 = palindromCheck("dad");
+// console.log(result1);
 
-const result2 = palindromCheck("mom");
-console.log(result2);
+// const result2 = palindromCheck("mom");
+// console.log(result2);
 
-const result3 = palindromCheck("son");
-console.log(result3);
+// const result3 = palindromCheck("son");
+// console.log(result3);
 
-const result4 = palindromCheck("noon");
-console.log(result4);
+// const result4 = palindromCheck("noon");
+// console.log(result4);
 
-const result5 = palindromCheck("refer");
-console.log(result5);
+// const result5 = palindromCheck("refer");
+// console.log(result5);
 
-const result6 = palindromCheck("pen");
-console.log(result6);
+// const result6 = palindromCheck("pen");
+// console.log(result6);
 
-const result7 = palindromCheck("racecar");
-console.log(result7);
+// const result7 = palindromCheck("racecar");
+// console.log(result7);
 
-const result8 = palindromCheck("civic");
-console.log(result8);
+// const result8 = palindromCheck("civic");
+// console.log(result8);
 
-const result9 = palindromCheck("day");
-console.log(result9);
+// const result9 = palindromCheck("day");
+// console.log(result9);
 
 
 // M-TASK
