@@ -1,3 +1,24 @@
+// P-TASK
+// Masalani izohi: Parametr sifatida yagona object qabul qiladigan function yozing. Qabul qilingan objectni nested array sifatida convert qilib qaytarsin.
+// Masalan: objectToArray({a:10, b:20}) return [['a', 10], ['b', 20]].
+
+
+// Masalani yechimi: 
+
+function objectToArray(obj: Record<string, any>): [string, any][] {
+    return Object.entries(obj);
+}
+
+const result1 = objectToArray({a: 10, b: 20});
+console.log(result1);
+
+const result2 = objectToArray({c: 6, d: 7});
+console.log(result2);
+
+const result3 = objectToArray({e: 19, f: 13});
+console.log(result3);
+
+
 // O-TASK
 // Masalani izohi: Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin. Va array ichidagi sonlar yig'indisini hisoblab chiqgan javobni qaytarsin
 // Masalan: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]); return 45
@@ -6,26 +27,26 @@
 
 // Masalani yechimi:
 
-function calculateSumOfNumbers(arr: any[]): number {
-  let sum = 0;
+// function calculateSumOfNumbers(arr: any[]): number {
+//   let sum = 0;
 
-  for (const item of arr) {
-    if (typeof item === "number") {
-      sum += item;
-    }
-  }
+//   for (const item of arr) {
+//     if (typeof item === "number") {
+//       sum += item;
+//     }
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-const result1 = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
-console.log(result1); 
+// const result1 = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
+// console.log(result1); 
 
-const result2 = calculateSumOfNumbers([7, "13", { son: 10 }, true, 6]);
-console.log(result2); 
+// const result2 = calculateSumOfNumbers([7, "13", { son: 10 }, true, 6]);
+// console.log(result2); 
 
-const result3 = calculateSumOfNumbers([2, "21", { son: 10 }, true, 19]);
-console.log(result3); 
+// const result3 = calculateSumOfNumbers([2, "21", { son: 10 }, true, 19]);
+// console.log(result3); 
 
 
 
