@@ -1,3 +1,29 @@
+// Q-TASK
+// Masalani izohi: Shunday function yozing, u 2 ta parametrga ega bo'lib birinchisi object, ikkinchisi string bo'lsin. Agar qabul qilinayotgan ikkinchi string, objectning biror bir propertysiga mos kelsa, 'true', aks holda mos kelmasa 'false' qaytarsin.
+// Masalan:  hasProperty({ name: "BMW", model: "M3" }, "model"); return true; Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
+// Masalan:  hasProperty({ name: "BMW", model: "M3" }, "year"); return false; Ushbu misolda, ikkinchi argument sifatida berilayotgan 'year' objectning propertysida mavjud bo'lmaganligi uchun 'false' natijani qaytarmoqda.
+
+
+// Masalani yechimi: 
+
+function hasProperty(obj: object, key: string): boolean {
+  return key in obj;
+}
+
+const result1 = hasProperty({name: "BWM", model: "M3"}, "model");
+console.log(result1);
+
+const result2 = hasProperty({name: "BWM", model: "M3"}, "year");
+console.log(result2);
+
+
+const result3 = hasProperty({name: "BWM", year: "1998"}, "model");
+console.log(result3);
+
+const result4 = hasProperty({name: "BWM", year: "1998"}, "year");
+console.log(result4);
+
+
 // P-TASK
 // Masalani izohi: Parametr sifatida yagona object qabul qiladigan function yozing. Qabul qilingan objectni nested array sifatida convert qilib qaytarsin.
 // Masalan: objectToArray({a:10, b:20}) return [['a', 10], ['b', 20]].
@@ -5,18 +31,18 @@
 
 // Masalani yechimi: 
 
-function objectToArray(obj: Record<string, any>): [string, any][] {
-    return Object.entries(obj);
-}
+// function objectToArray(obj: Record<string, any>): [string, any][] {
+//     return Object.entries(obj);
+// }
 
-const result1 = objectToArray({a: 10, b: 20});
-console.log(result1);
+// const result1 = objectToArray({a: 10, b: 20});
+// console.log(result1);
 
-const result2 = objectToArray({c: 6, d: 7});
-console.log(result2);
+// const result2 = objectToArray({c: 6, d: 7});
+// console.log(result2);
 
-const result3 = objectToArray({e: 19, f: 13});
-console.log(result3);
+// const result3 = objectToArray({e: 19, f: 13});
+// console.log(result3);
 
 
 // O-TASK
