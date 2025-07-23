@@ -1,3 +1,37 @@
+// R-TASK
+// Masalani izohi: Shunday function yozing, u string parametrga ega bo'lsin. Agar argument sifatida berilayotgan string, "1 + 2" bo'lsa, string ichidagi sonlarin yig'indisni hisoblab, number holatida qaytarsin
+// MAsalan: calculate("1 + 3"); return 4; 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
+
+
+// Masalani yechimi:
+
+function calculate(expression: string): number {
+ return expression.split('+').reduce((acc, val) => acc + Number(val.trim()), 0);
+
+}
+
+const result1 = calculate("1 + 3");
+console.log(result1);
+
+const result2 = calculate("6 + 7");
+console.log(result2);
+
+const result3 = calculate("2 + 19");
+console.log(result3);
+
+const result4 = calculate("7 + 9");
+console.log(result4);
+
+const result5 = calculate("15 + 19");
+console.log(result5);
+
+const result6 = calculate("2 + 7");
+console.log(result6);
+
+const result7 = calculate("9 + 19");
+console.log(result7);
+
+
 // Q-TASK
 // Masalani izohi: Shunday function yozing, u 2 ta parametrga ega bo'lib birinchisi object, ikkinchisi string bo'lsin. Agar qabul qilinayotgan ikkinchi string, objectning biror bir propertysiga mos kelsa, 'true', aks holda mos kelmasa 'false' qaytarsin.
 // Masalan:  hasProperty({ name: "BMW", model: "M3" }, "model"); return true; Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
@@ -6,22 +40,22 @@
 
 // Masalani yechimi: 
 
-function hasProperty(obj: object, key: string): boolean {
-  return key in obj;
-}
+// function hasProperty(obj: object, key: string): boolean {
+//   return key in obj;
+// }
 
-const result1 = hasProperty({name: "BWM", model: "M3"}, "model");
-console.log(result1);
+// const result1 = hasProperty({name: "BWM", model: "M3"}, "model");
+// console.log(result1);
 
-const result2 = hasProperty({name: "BWM", model: "M3"}, "year");
-console.log(result2);
+// const result2 = hasProperty({name: "BWM", model: "M3"}, "year");
+// console.log(result2);
 
 
-const result3 = hasProperty({name: "BWM", year: "1998"}, "model");
-console.log(result3);
+// const result3 = hasProperty({name: "BWM", year: "1998"}, "model");
+// console.log(result3);
 
-const result4 = hasProperty({name: "BWM", year: "1998"}, "year");
-console.log(result4);
+// const result4 = hasProperty({name: "BWM", year: "1998"}, "year");
+// console.log(result4);
 
 
 // P-TASK
