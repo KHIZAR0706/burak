@@ -1,3 +1,35 @@
+// S-TASK
+// Masalani izohi: Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin.
+// Masalan: missingNumber([3, 0, 1]) return 2.
+
+// Masalani yechimi:
+
+function missingNumber(nums: number[]): number {
+  const n = nums.length,
+   expectedSum = (n * (n + 1)) / 2,
+   actualSum = nums.reduce((sum, num) => sum + num, 0); 
+  return expectedSum - actualSum; 
+}
+
+
+const result1 = missingNumber([0, 1, 2, 3, 4, 6]);
+console.log(result1);
+
+const result2 = missingNumber([0, 1, 2, 3, 4, 5, 7]);
+console.log(result2);
+
+const result3 = missingNumber([0, 1, 2, 3, 4, 5, 6, 8]);
+console.log(result3);
+
+const result4 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 9]);
+console.log(result4);
+
+const result5 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 10]);
+console.log(result5);
+
+const result6 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]);
+console.log(result6);
+
 // R-TASK
 // Masalani izohi: Shunday function yozing, u string parametrga ega bo'lsin. Agar argument sifatida berilayotgan string, "1 + 2" bo'lsa, string ichidagi sonlarin yig'indisni hisoblab, number holatida qaytarsin
 // MAsalan: calculate("1 + 3"); return 4; 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
@@ -5,31 +37,31 @@
 
 // Masalani yechimi:
 
-function calculate(expression: string): number {
- return expression.split('+').reduce((acc, val) => acc + Number(val.trim()), 0);
+// function calculate(expression: string): number {
+//  return expression.split('+').reduce((acc, val) => acc + Number(val.trim()), 0);
 
-}
+// }
 
-const result1 = calculate("1 + 3");
-console.log(result1);
+// const result1 = calculate("1 + 3");
+// console.log(result1);
 
-const result2 = calculate("6 + 7");
-console.log(result2);
+// const result2 = calculate("6 + 7");
+// console.log(result2);
 
-const result3 = calculate("2 + 19");
-console.log(result3);
+// const result3 = calculate("2 + 19");
+// console.log(result3);
 
-const result4 = calculate("7 + 9");
-console.log(result4);
+// const result4 = calculate("7 + 9");
+// console.log(result4);
 
-const result5 = calculate("15 + 19");
-console.log(result5);
+// const result5 = calculate("15 + 19");
+// console.log(result5);
 
-const result6 = calculate("2 + 7");
-console.log(result6);
+// const result6 = calculate("2 + 7");
+// console.log(result6);
 
-const result7 = calculate("9 + 19");
-console.log(result7);
+// const result7 = calculate("9 + 19");
+// console.log(result7);
 
 
 // Q-TASK
