@@ -1,34 +1,64 @@
+// T-TASK
+// Masalani izohi: Shunday function tuzing, u sonlardan tashkil topgan 2'ta array qabul qilsin. Va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin.
+// Masalan: mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]); return [0, 3, 4, 4, 6, 30, 31];
+// Yuqoridagi misolda, ikkala arrayni birlashtirib, tartib raqam bo'yicha tartiblab qaytarmoqda.
+
+
+// Masalani yechimi:
+
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+  return [...arr1, ...arr2].sort((a, b) => a - b);
+}
+
+const result1 = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
+console.log(result1);
+
+const result2 = mergeSortedArrays([7, 8, 6, 13], [0, 5, 14]);
+console.log(result2)
+
+const result3 = mergeSortedArrays([1, 3, 4, 10], [0, 5, 11]);
+console.log(result3)
+
+const result4 = mergeSortedArrays([0, 1, 2, 18], [3, 2, 19]);
+console.log(result4)
+
+const result5 = mergeSortedArrays([0, 9, 15, 17], [1, 6, 21]);
+console.log(result5)
+
+const result6 = mergeSortedArrays([0, 3, 4, 31], [70, 98, 68]);
+console.log(result6);
+
 // S-TASK
 // Masalani izohi: Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin.
 // Masalan: missingNumber([3, 0, 1]) return 2.
 
 // Masalani yechimi:
 
-function missingNumber(nums: number[]): number {
-  const n = nums.length,
-   expectedSum = (n * (n + 1)) / 2,
-   actualSum = nums.reduce((sum, num) => sum + num, 0); 
-  return expectedSum - actualSum; 
-}
+// function missingNumber(nums: number[]): number {
+//   const n = nums.length,
+//    expectedSum = (n * (n + 1)) / 2,
+//    actualSum = nums.reduce((sum, num) => sum + num, 0); 
+//   return expectedSum - actualSum; 
+// }
 
 
-const result1 = missingNumber([0, 1, 2, 3, 4, 6]);
-console.log(result1);
+// const result1 = missingNumber([0, 1, 2, 3, 4, 6]);
+// console.log(result1);
 
-const result2 = missingNumber([0, 1, 2, 3, 4, 5, 7]);
-console.log(result2);
+// const result2 = missingNumber([0, 1, 2, 3, 4, 5, 7]);
+// console.log(result2);
 
-const result3 = missingNumber([0, 1, 2, 3, 4, 5, 6, 8]);
-console.log(result3);
+// const result3 = missingNumber([0, 1, 2, 3, 4, 5, 6, 8]);
+// console.log(result3);
 
-const result4 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 9]);
-console.log(result4);
+// const result4 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 9]);
+// console.log(result4);
 
-const result5 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 10]);
-console.log(result5);
+// const result5 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 10]);
+// console.log(result5);
 
-const result6 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]);
-console.log(result6);
+// const result6 = missingNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]);
+// console.log(result6);
 
 // R-TASK
 // Masalani izohi: Shunday function yozing, u string parametrga ega bo'lsin. Agar argument sifatida berilayotgan string, "1 + 2" bo'lsa, string ichidagi sonlarin yig'indisni hisoblab, number holatida qaytarsin
