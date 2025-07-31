@@ -1,3 +1,40 @@
+// U-TASK
+// Masalani izohi: Shunday function tuzing, uni number parametri bo'lsin. Va bu function berilgan parametrgacha, 0'dan boshlab oraliqda nechta toq sonlar borligini aniqlab return qilsin.
+// Masalan: sumOdds(9) return 4; sumOdds(11) return 5;
+// Yuqoridagi birinchi misolda, argument sifatida, 9 berilmoqda. Va 0'dan boshlab sanaganda 9'gacha 4'ta toq son mavjud. Keyingi namunada ham xuddi shunday xolat takrorlanmoqda.
+
+
+// Masalani yechimi:
+
+function sumOdds(n: number): number {
+  let count = 0;
+  for (let i = 1; i < n; i += 2) {
+    count++;
+  }
+  return count;
+}
+
+const result1 = sumOdds(6);
+console.log(result1);
+
+const result2 = sumOdds(7);
+console.log(result2);
+
+const result3 = sumOdds(19);
+console.log(result3);
+
+const result4 = sumOdds(13);
+console.log(result4);
+
+const result5 = sumOdds(15);
+console.log(result5);
+
+const result6 = sumOdds(11);
+console.log(result6);
+
+const result7 = sumOdds(4);
+console.log(result7);
+
 // T-TASK
 // Masalani izohi: Shunday function tuzing, u sonlardan tashkil topgan 2'ta array qabul qilsin. Va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin.
 // Masalan: mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]); return [0, 3, 4, 4, 6, 30, 31];
@@ -6,27 +43,27 @@
 
 // Masalani yechimi:
 
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-  return [...arr1, ...arr2].sort((a, b) => a - b);
-}
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//   return [...arr1, ...arr2].sort((a, b) => a - b);
+// }
 
-const result1 = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
-console.log(result1);
+// const result1 = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
+// console.log(result1);
 
-const result2 = mergeSortedArrays([7, 8, 6, 13], [0, 5, 14]);
-console.log(result2)
+// const result2 = mergeSortedArrays([7, 8, 6, 13], [0, 5, 14]);
+// console.log(result2)
 
-const result3 = mergeSortedArrays([1, 3, 4, 10], [0, 5, 11]);
-console.log(result3)
+// const result3 = mergeSortedArrays([1, 3, 4, 10], [0, 5, 11]);
+// console.log(result3)
 
-const result4 = mergeSortedArrays([0, 1, 2, 18], [3, 2, 19]);
-console.log(result4)
+// const result4 = mergeSortedArrays([0, 1, 2, 18], [3, 2, 19]);
+// console.log(result4)
 
-const result5 = mergeSortedArrays([0, 9, 15, 17], [1, 6, 21]);
-console.log(result5)
+// const result5 = mergeSortedArrays([0, 9, 15, 17], [1, 6, 21]);
+// console.log(result5)
 
-const result6 = mergeSortedArrays([0, 3, 4, 31], [70, 98, 68]);
-console.log(result6);
+// const result6 = mergeSortedArrays([0, 3, 4, 31], [70, 98, 68]);
+// console.log(result6);
 
 // S-TASK
 // Masalani izohi: Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin.
