@@ -1,39 +1,76 @@
+// V-TASK
+// Masalani izohi: Shunday function yozing, uni string parametri bo'lsin. Va bu function stringdagi har bir harfni o'zi bilan necha marotaba taktorlanganligini ko'rsatuvchi object qaytarsin.
+// Masalan: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}. Yuqoridagi misolda, 'hello' so'zi tarkibida qatnashgan harflar necha marotaba takrorlangini bilan object sifatida qaytarilmoqda.
+
+// Masalani yechimi:
+
+function countChars(str: string): { [key: string]: number } {
+  const result: { [key: string]: number } = {};
+
+  for (const char of str) {
+    result[char] = (result[char] || 0) + 1;
+  }
+
+  return result;
+}
+
+const result1 = countChars("hello");
+console.log(result1);
+
+const result2 = countChars("world");
+console.log(result2);
+
+const result3 = countChars("dad");
+console.log(result3);
+
+const result4 = countChars("mom");
+console.log(result4);
+
+const result5 = countChars("tashkent");
+console.log(result5);
+
+const result6 = countChars("capital");
+console.log(result6);
+
+const result7 = countChars("korea");
+console.log(result7);
+
+
 // U-TASK
 // Masalani izohi: Shunday function tuzing, uni number parametri bo'lsin. Va bu function berilgan parametrgacha, 0'dan boshlab oraliqda nechta toq sonlar borligini aniqlab return qilsin.
 // Masalan: sumOdds(9) return 4; sumOdds(11) return 5;
 // Yuqoridagi birinchi misolda, argument sifatida, 9 berilmoqda. Va 0'dan boshlab sanaganda 9'gacha 4'ta toq son mavjud. Keyingi namunada ham xuddi shunday xolat takrorlanmoqda.
 
-
 // Masalani yechimi:
 
-function sumOdds(n: number): number {
-  let count = 0;
-  for (let i = 1; i < n; i += 2) {
-    count++;
-  }
-  return count;
-}
+// function sumOdds(n: number): number {
+//   let count = 0;
+//   for (let i = 1; i < n; i += 2) {
+//     count++;
+//   }
+//   return count;
+// }
 
-const result1 = sumOdds(6);
-console.log(result1);
+// const result1 = sumOdds(6);
+// console.log(result1);
 
-const result2 = sumOdds(7);
-console.log(result2);
+// const result2 = sumOdds(7);
+// console.log(result2);
 
-const result3 = sumOdds(19);
-console.log(result3);
+// const result3 = sumOdds(19);
+// console.log(result3);
 
-const result4 = sumOdds(13);
-console.log(result4);
+// const result4 = sumOdds(13);
+// console.log(result4);
 
-const result5 = sumOdds(15);
-console.log(result5);
+// const result5 = sumOdds(15);
+// console.log(result5);
 
-const result6 = sumOdds(11);
-console.log(result6);
+// const result6 = sumOdds(11);
+// console.log(result6);
 
-const result7 = sumOdds(4);
-console.log(result7);
+// const result7 = sumOdds(4);
+// console.log(result7);
 
 // T-TASK
 // Masalani izohi: Shunday function tuzing, u sonlardan tashkil topgan 2'ta array qabul qilsin. Va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin.
