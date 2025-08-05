@@ -1,39 +1,48 @@
+
+
+
+
+
+
+
+
+
 // V-TASK
 // Masalani izohi: Shunday function yozing, uni string parametri bo'lsin. Va bu function stringdagi har bir harfni o'zi bilan necha marotaba taktorlanganligini ko'rsatuvchi object qaytarsin.
 // Masalan: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}. Yuqoridagi misolda, 'hello' so'zi tarkibida qatnashgan harflar necha marotaba takrorlangini bilan object sifatida qaytarilmoqda.
 
 // Masalani yechimi:
 
-function countChars(str: string): { [key: string]: number } {
-  const result: { [key: string]: number } = {};
+// function countChars(str: string): { [key: string]: number } {
+//   const result: { [key: string]: number } = {};
 
-  for (const char of str) {
-    result[char] = (result[char] || 0) + 1;
-  }
+//   for (const char of str) {
+//     result[char] = (result[char] || 0) + 1;
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-const result1 = countChars("hello");
-console.log(result1);
+// const result1 = countChars("hello");
+// console.log(result1);
 
-const result2 = countChars("world");
-console.log(result2);
+// const result2 = countChars("world");
+// console.log(result2);
 
-const result3 = countChars("dad");
-console.log(result3);
+// const result3 = countChars("dad");
+// console.log(result3);
 
-const result4 = countChars("mom");
-console.log(result4);
+// const result4 = countChars("mom");
+// console.log(result4);
 
-const result5 = countChars("tashkent");
-console.log(result5);
+// const result5 = countChars("tashkent");
+// console.log(result5);
 
-const result6 = countChars("capital");
-console.log(result6);
+// const result6 = countChars("capital");
+// console.log(result6);
 
-const result7 = countChars("korea");
-console.log(result7);
+// const result7 = countChars("korea");
+// console.log(result7);
 
 
 // U-TASK
