@@ -1,5 +1,39 @@
+// W-TASK
+// Masalani izohi: Shunday function yozing, u o'ziga parametr sifatida yagona array va number qabul qilsin. Siz tuzgan function arrayni numberda berilgan uzunlikda kesib bo'laklarga ajratgan holatida qaytarsin.
+// Masalan: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3); return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+// Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti
 
 
+// Masalani yechimi:
+
+function chunkArray(arr: any[], size: number): any[][] {
+  const result: any[][] = [];
+
+  for (let i = 0; i < arr.length; i += size) {
+    const chunk = arr.slice(i, i + size);
+    result.push(chunk);
+  }
+
+  return result;
+}
+
+const result1 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+console.log(result1);
+
+const result2 = chunkArray([10, 20, 30, 40, 50, 60], 4);
+console.log(result2);
+
+const result3 = chunkArray([1, 2, 3, 4, 5, 6, 7], 5);
+console.log(result3);
+
+const result4 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 1);
+console.log(result4);
+
+const result5 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 3);
+console.log(result5);
+
+const result6 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], 2);
+console.log(result6);
 
 
 
