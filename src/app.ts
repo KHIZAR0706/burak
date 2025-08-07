@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import router from "./router";
+import router from "./router"
 import routerAdmin from "./router-admin"
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
@@ -19,6 +19,7 @@ const store = new MongoDBStore({
 /** 1-ENTRANCE **/
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
