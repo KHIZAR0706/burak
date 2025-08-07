@@ -1,3 +1,44 @@
+// X-TASK
+// Masalani izohi: Shunday function yozing, uni object va string parametrlari bo'lsin. Bu function, birinchi object parametri tarkibida, kalit sifatida ikkinchi string parametri necha marotaba takrorlanganlini sanab qaytarsin.
+// Eslatma => Nested object'lar ham sanalsin
+// Masalan: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2
+// Yuqoridagi misolda, birinchi argument object, ikkinchi argument 'model'. Funktsiya, shu ikkinchi argument 'model', birinchi argument object tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
+
+// Masalani yechimi:
+
+function countOccurrences(car: any, keyToFind: string): number {
+  if (typeof car !== 'object' || car === null) return 0;
+
+  let count = 0;
+
+  for (const key in car) {
+    if (key === keyToFind) count++;
+    count += countOccurrences(car[key], keyToFind); 
+  }
+
+  return count;
+}
+
+const car1 = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } },
+      result1 = countOccurrences(car1, 'model');
+console.log(result1); 
+
+const car2 = { model: 'Lamborghini', steer: { model: 'HANKOOK', wheel: { model: 'Pirelli' } } },
+      result2 = countOccurrences(car2, 'model');
+console.log(result2); 
+
+const car3 = { model: 'Audi', year: 2020, color: 'green' },
+      result3 = countOccurrences(car3, 'model');
+console.log(result3); 
+
+const car4 = { model: 'BMW', specs: { model: 'X5', engine: { model: 'V8' } } },
+      result4 = countOccurrences(car4, 'model');
+console.log(result4);
+
+const car5 = { model: 'Tesla', specs: { model: 'Model S', parts: { engine: { model: 'Electric' }, wheels: { model: 'Michelin' } } } },
+      result5 = countOccurrences(car5, 'model');
+console.log(result5);
+
 // W-TASK
 // Masalani izohi: Shunday function yozing, u o'ziga parametr sifatida yagona array va number qabul qilsin. Siz tuzgan function arrayni numberda berilgan uzunlikda kesib bo'laklarga ajratgan holatida qaytarsin.
 // Masalan: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3); return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
@@ -6,39 +47,34 @@
 
 // Masalani yechimi:
 
-function chunkArray(arr: any[], size: number): any[][] {
-  const result: any[][] = [];
+// function chunkArray(arr: any[], size: number): any[][] {
+//   const result: any[][] = [];
 
-  for (let i = 0; i < arr.length; i += size) {
-    const chunk = arr.slice(i, i + size);
-    result.push(chunk);
-  }
+//   for (let i = 0; i < arr.length; i += size) {
+//     const chunk = arr.slice(i, i + size);
+//     result.push(chunk);
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-const result1 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
-console.log(result1);
+// const result1 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+// console.log(result1);
 
-const result2 = chunkArray([10, 20, 30, 40, 50, 60], 4);
-console.log(result2);
+// const result2 = chunkArray([10, 20, 30, 40, 50, 60], 4);
+// console.log(result2);
 
-const result3 = chunkArray([1, 2, 3, 4, 5, 6, 7], 5);
-console.log(result3);
+// const result3 = chunkArray([1, 2, 3, 4, 5, 6, 7], 5);
+// console.log(result3);
 
-const result4 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 1);
-console.log(result4);
+// const result4 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 1);
+// console.log(result4);
 
-const result5 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 3);
-console.log(result5);
+// const result5 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 3);
+// console.log(result5);
 
-const result6 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], 2);
-console.log(result6);
-
-
-
-
-
+// const result6 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], 2);
+// console.log(result6);
 
 
 // V-TASK
