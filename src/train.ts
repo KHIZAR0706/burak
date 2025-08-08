@@ -1,3 +1,36 @@
+// Y-TASK
+// Masalani izohi: Shunday function yozing, uni 2'ta array parametri bo'lsin. Bu function ikkala arrayda ham ishtirok etgan bir xil qiymatlarni yagona arrayga joylab qaytarsin.
+// Masalan: findIntersection([1,2,3], [3,2,0]) return [2,3] Yuqoridagi misolda, argument sifatida berilayotgan array'larda o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
+// ikkala array'da ishtirok etgan o'xshash sonlarni yagona arrayga joylab return qilmoqda.
+
+// Maslani yechimi:
+
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+  return arr1.filter(num => arr2.includes(num));
+}
+
+const result1 = findIntersection([1, 2, 3], [3, 2, 0]);
+console.log(result1);
+
+const result2 = findIntersection([4, 5, 6], [6, 7, 4]);
+console.log(result2);
+
+const result3 = findIntersection([1, 4, 3], [3, 4, 2]);
+console.log(result3);
+
+const result4 = findIntersection([5, 6, 7], [7, 5, 0]);
+console.log(result4);
+
+const result5 = findIntersection([13, 14, 15], [13, 15, 16]);
+console.log(result5);
+
+const result6 = findIntersection([5, 6, 7], [6, 7, 8]);
+console.log(result6);
+
+const result7 = findIntersection([10, 11, 13], [11, 12, 13]);
+console.log(result7);
+
+
 // X-TASK
 // Masalani izohi: Shunday function yozing, uni object va string parametrlari bo'lsin. Bu function, birinchi object parametri tarkibida, kalit sifatida ikkinchi string parametri necha marotaba takrorlanganlini sanab qaytarsin.
 // Eslatma => Nested object'lar ham sanalsin
@@ -6,38 +39,38 @@
 
 // Masalani yechimi:
 
-function countOccurrences(car: any, keyToFind: string): number {
-  if (typeof car !== 'object' || car === null) return 0;
+// function countOccurrences(car: any, keyToFind: string): number {
+//   if (typeof car !== 'object' || car === null) return 0;
 
-  let count = 0;
+//   let count = 0;
 
-  for (const key in car) {
-    if (key === keyToFind) count++;
-    count += countOccurrences(car[key], keyToFind); 
-  }
+//   for (const key in car) {
+//     if (key === keyToFind) count++;
+//     count += countOccurrences(car[key], keyToFind); 
+//   }
 
-  return count;
-}
+//   return count;
+// }
 
-const car1 = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } },
-      result1 = countOccurrences(car1, 'model');
-console.log(result1); 
+// const car1 = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } },
+//       result1 = countOccurrences(car1, 'model');
+// console.log(result1); 
 
-const car2 = { model: 'Lamborghini', steer: { model: 'HANKOOK', wheel: { model: 'Pirelli' } } },
-      result2 = countOccurrences(car2, 'model');
-console.log(result2); 
+// const car2 = { model: 'Lamborghini', steer: { model: 'HANKOOK', wheel: { model: 'Pirelli' } } },
+//       result2 = countOccurrences(car2, 'model');
+// console.log(result2); 
 
-const car3 = { model: 'Audi', year: 2020, color: 'green' },
-      result3 = countOccurrences(car3, 'model');
-console.log(result3); 
+// const car3 = { model: 'Audi', year: 2020, color: 'green' },
+//       result3 = countOccurrences(car3, 'model');
+// console.log(result3); 
 
-const car4 = { model: 'BMW', specs: { model: 'X5', engine: { model: 'V8' } } },
-      result4 = countOccurrences(car4, 'model');
-console.log(result4);
+// const car4 = { model: 'BMW', specs: { model: 'X5', engine: { model: 'V8' } } },
+//       result4 = countOccurrences(car4, 'model');
+// console.log(result4);
 
-const car5 = { model: 'Tesla', specs: { model: 'Model S', parts: { engine: { model: 'Electric' }, wheels: { model: 'Michelin' } } } },
-      result5 = countOccurrences(car5, 'model');
-console.log(result5);
+// const car5 = { model: 'Tesla', specs: { model: 'Model S', parts: { engine: { model: 'Electric' }, wheels: { model: 'Michelin' } } } },
+//       result5 = countOccurrences(car5, 'model');
+// console.log(result5);
 
 // W-TASK
 // Masalani izohi: Shunday function yozing, u o'ziga parametr sifatida yagona array va number qabul qilsin. Siz tuzgan function arrayni numberda berilgan uzunlikda kesib bo'laklarga ajratgan holatida qaytarsin.
