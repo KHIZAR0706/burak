@@ -1,3 +1,38 @@
+// Z-TASK
+// Masalani izohi: Shunday function yozing. Bu function sonlardan iborat array qabul qilsin. Function'ning vazifasi array tarkibidagi juft sonlarni topib ularni yig'disini qaytarsin.
+// Masalan: sumEvens([1, 2, 3]); return 2; sumEvens([1, 2, 3, 2]); return 4;
+// Yuqoridagi misolda, bizning funktsiya berilayotgan array tarkibidagi sonlar ichidan faqatgina juft bo'lgan sonlarni topib, ularni hisoblab yig'indisini qaytarmoqda.
+
+// Maslani yechimi: 
+
+function sumEvens(arr: number[]): number {
+  return arr
+    .filter(num => num % 2 === 0)
+    .reduce((sum, num) => sum + num, 0); 
+}
+
+const result1 = sumEvens([1, 2, 3]);
+console.log(result1);
+
+const result2 = sumEvens([1, 2, 3, 2]);
+console.log(result2);
+
+const result3 = sumEvens([4, 5, 6, 7, 8]);
+console.log(result3);
+
+const result4 = sumEvens([10, 11, 12, 13]);
+console.log(result4);
+
+const result5 = sumEvens([8, 9, 10, 11, 12]);
+console.log(result5);
+
+const result6 = sumEvens([2, 3, 4, 5]);
+console.log(result6);
+
+const result7 = sumEvens([6, 7, 8, 9, 10]);
+console.log(result7);
+
+
 // Y-TASK
 // Masalani izohi: Shunday function yozing, uni 2'ta array parametri bo'lsin. Bu function ikkala arrayda ham ishtirok etgan bir xil qiymatlarni yagona arrayga joylab qaytarsin.
 // Masalan: findIntersection([1,2,3], [3,2,0]) return [2,3] Yuqoridagi misolda, argument sifatida berilayotgan array'larda o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
@@ -5,30 +40,30 @@
 
 // Maslani yechimi:
 
-function findIntersection(arr1: number[], arr2: number[]): number[] {
-  return arr1.filter(num => arr2.includes(num));
-}
+// function findIntersection(arr1: number[], arr2: number[]): number[] {
+//   return arr1.filter(num => arr2.includes(num));
+// }
 
-const result1 = findIntersection([1, 2, 3], [3, 2, 0]);
-console.log(result1);
+// const result1 = findIntersection([1, 2, 3], [3, 2, 0]);
+// console.log(result1);
 
-const result2 = findIntersection([4, 5, 6], [6, 7, 4]);
-console.log(result2);
+// const result2 = findIntersection([4, 5, 6], [6, 7, 4]);
+// console.log(result2);
 
-const result3 = findIntersection([1, 4, 3], [3, 4, 2]);
-console.log(result3);
+// const result3 = findIntersection([1, 4, 3], [3, 4, 2]);
+// console.log(result3);
 
-const result4 = findIntersection([5, 6, 7], [7, 5, 0]);
-console.log(result4);
+// const result4 = findIntersection([5, 6, 7], [7, 5, 0]);
+// console.log(result4);
 
-const result5 = findIntersection([13, 14, 15], [13, 15, 16]);
-console.log(result5);
+// const result5 = findIntersection([13, 14, 15], [13, 15, 16]);
+// console.log(result5);
 
-const result6 = findIntersection([5, 6, 7], [6, 7, 8]);
-console.log(result6);
+// const result6 = findIntersection([5, 6, 7], [6, 7, 8]);
+// console.log(result6);
 
-const result7 = findIntersection([10, 11, 13], [11, 12, 13]);
-console.log(result7);
+// const result7 = findIntersection([10, 11, 13], [11, 12, 13]);
+// console.log(result7);
 
 
 // X-TASK
