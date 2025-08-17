@@ -1,3 +1,38 @@
+// ZB-TASK
+// Masalani izohi: Shunday function yozing, uni 2 ta number parametri bolsin va berilgan sonlar orasidan random raqam return qilsin
+// Masalan: randomBetween(30, 50) return 45
+
+// Masalani yechimi:
+
+function randomBetween(a: number, b: number): number {
+  const min = Math.ceil(Math.min(a, b)),
+        max = Math.floor(Math.max(a, b));
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const result1 = randomBetween(30, 50);
+console.log(result1);
+
+const result2 = randomBetween(10, 20);
+console.log(result2)
+
+const result3 = randomBetween(13, 19);
+console.log(result3)
+
+const result4 = randomBetween(-5, 5);
+console.log(result4)
+
+const result5 = randomBetween(11, 18);
+console.log(result5)
+
+const result6 = randomBetween(98, 113);
+console.log(result6)
+
+const result7 = randomBetween(-6, 12);
+console.log(result7)
+
+
+
 // Z-TASK
 // Masalani izohi: Shunday function yozing. Bu function sonlardan iborat array qabul qilsin. Function'ning vazifasi array tarkibidagi juft sonlarni topib ularni yig'disini qaytarsin.
 // Masalan: sumEvens([1, 2, 3]); return 2; sumEvens([1, 2, 3, 2]); return 4;
@@ -5,32 +40,32 @@
 
 // Maslani yechimi: 
 
-function sumEvens(arr: number[]): number {
-  return arr
-    .filter(num => num % 2 === 0)
-    .reduce((sum, num) => sum + num, 0); 
-}
+// function sumEvens(arr: number[]): number {
+//   return arr
+//     .filter(num => num % 2 === 0)
+//     .reduce((sum, num) => sum + num, 0); 
+// }
 
-const result1 = sumEvens([1, 2, 3]);
-console.log(result1);
+// const result1 = sumEvens([1, 2, 3]);
+// console.log(result1);
 
-const result2 = sumEvens([1, 2, 3, 2]);
-console.log(result2);
+// const result2 = sumEvens([1, 2, 3, 2]);
+// console.log(result2);
 
-const result3 = sumEvens([4, 5, 6, 7, 8]);
-console.log(result3);
+// const result3 = sumEvens([4, 5, 6, 7, 8]);
+// console.log(result3);
 
-const result4 = sumEvens([10, 11, 12, 13]);
-console.log(result4);
+// const result4 = sumEvens([10, 11, 12, 13]);
+// console.log(result4);
 
-const result5 = sumEvens([8, 9, 10, 11, 12]);
-console.log(result5);
+// const result5 = sumEvens([8, 9, 10, 11, 12]);
+// console.log(result5);
 
-const result6 = sumEvens([2, 3, 4, 5]);
-console.log(result6);
+// const result6 = sumEvens([2, 3, 4, 5]);
+// console.log(result6);
 
-const result7 = sumEvens([6, 7, 8, 9, 10]);
-console.log(result7);
+// const result7 = sumEvens([6, 7, 8, 9, 10]);
+// console.log(result7);
 
 
 // Y-TASK
