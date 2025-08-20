@@ -1,35 +1,69 @@
+// ZC-TASK
+// Masalani izohi: Selisy (°C) shkalasi bo'yicha raqam qabul qilib, uni Ferenhayt (°F) shkalisaga o'zgaritib beradigan function yozing.
+// Masalan: celsiusToFahrenheit(0) return 32; celsiusToFahrenheit(10) return 50;
+// Yuqoridagi misolda, 0°C, 32°F'ga teng. Yoki 10 gradus Selsiy, 50 Farenhaytga teng. °C va °F => Tempraturani o'lchashda ishlatiladigan o'lchov birligi.
+
+
+// Masalani yechimi: 
+
+function celsiusToFahrenheit(celsius: number): number {
+  return (celsius * 9/5) + 32;
+}
+
+const result1 = celsiusToFahrenheit(0);
+console.log(result1);
+
+const result2 = celsiusToFahrenheit(10);
+console.log(result2);
+
+const result3 = celsiusToFahrenheit(13);
+console.log(result3);
+
+const result4 =celsiusToFahrenheit(20);
+console.log(result4);
+
+const result5 = celsiusToFahrenheit(30);
+console.log(result5);
+
+const result6 = celsiusToFahrenheit(100);
+console.log(result6);
+
+const result7 = celsiusToFahrenheit(90);
+console.log(result7);
+
+
 // ZB-TASK
 // Masalani izohi: Shunday function yozing, uni 2 ta number parametri bolsin va berilgan sonlar orasidan random raqam return qilsin
 // Masalan: randomBetween(30, 50) return 45
 
 // Masalani yechimi:
 
-function randomBetween(a: number, b: number): number {
-  const min = Math.ceil(Math.min(a, b)),
-        max = Math.floor(Math.max(a, b));
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function randomBetween(a: number, b: number): number {
+//   const min = Math.ceil(Math.min(a, b)),
+//         max = Math.floor(Math.max(a, b));
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
-const result1 = randomBetween(30, 50);
-console.log(result1);
+// const result1 = randomBetween(30, 50);
+// console.log(result1);
 
-const result2 = randomBetween(10, 20);
-console.log(result2)
+// const result2 = randomBetween(10, 20);
+// console.log(result2)
 
-const result3 = randomBetween(13, 19);
-console.log(result3)
+// const result3 = randomBetween(13, 19);
+// console.log(result3)
 
-const result4 = randomBetween(-5, 5);
-console.log(result4)
+// const result4 = randomBetween(-5, 5);
+// console.log(result4)
 
-const result5 = randomBetween(11, 18);
-console.log(result5)
+// const result5 = randomBetween(11, 18);
+// console.log(result5)
 
-const result6 = randomBetween(98, 113);
-console.log(result6)
+// const result6 = randomBetween(98, 113);
+// console.log(result6)
 
-const result7 = randomBetween(-6, 12);
-console.log(result7)
+// const result7 = randomBetween(-6, 12);
+// console.log(result7)
 
 
 
