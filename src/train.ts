@@ -1,3 +1,35 @@
+// ZD-TASK
+// Masalani izohi: Shunday function yozing. Bu function o'ziga, parametr sifatida birinchi oddiy number, keyin yagona array va uchinchi bo'lib oddiy number qabul qilsin. Berilgan birinchi number parametr, arrayning tarkibida indeks bo'yicha hisoblanib, shu aniqlangan indeksni uchinchi number parametr bilan alashtirib, natija sifatida yangilangan arrayni qaytarsin.
+// Masalan: changeNumberInArray(1, [1,3,7,2], 2) return [1,2,7,2];
+// Yuqoridagi misolda, birinchi raqam bu '1' va arrayning '1'chi indeksi bu 3. Bizning function uchinchi berilgan '2' raqamini shu '3' bilan almashtirib, yangilangan arrayni qaytarmoqda.
+
+
+// Masalani yechimi:
+
+function changeNumberInArray(i: number, arr: number[], val: number): number[] {
+  arr[i] = val;
+  return arr;
+}
+
+const result1 = changeNumberInArray(1, [1, 3, 7, 2], 2);
+console.log(result1);
+
+const result2 = changeNumberInArray(1, [4, 5, 6, 7], 8);
+console.log(result2);
+
+const result3 = changeNumberInArray(2, [10, 12, 13, 14], 11);
+console.log(result3);
+
+const result4 = changeNumberInArray(0, [13, 14, 15, 16, 17, 18, 19], 11);
+console.log(result4);
+
+const result5 = changeNumberInArray(3, [10, 20, 30, 40], 69);
+console.log(result5);
+
+const result6 = changeNumberInArray(4, [6, 7, 8, 9, 10], 13);
+console.log(result6);
+
+
 // ZC-TASK
 // Masalani izohi: Selisy (°C) shkalasi bo'yicha raqam qabul qilib, uni Ferenhayt (°F) shkalisaga o'zgaritib beradigan function yozing.
 // Masalan: celsiusToFahrenheit(0) return 32; celsiusToFahrenheit(10) return 50;
@@ -6,30 +38,30 @@
 
 // Masalani yechimi: 
 
-function celsiusToFahrenheit(celsius: number): number {
-  return (celsius * 9/5) + 32;
-}
+// function celsiusToFahrenheit(celsius: number): number {
+//   return (celsius * 9/5) + 32;
+// }
 
-const result1 = celsiusToFahrenheit(0);
-console.log(result1);
+// const result1 = celsiusToFahrenheit(0);
+// console.log(result1);
 
-const result2 = celsiusToFahrenheit(10);
-console.log(result2);
+// const result2 = celsiusToFahrenheit(10);
+// console.log(result2);
 
-const result3 = celsiusToFahrenheit(13);
-console.log(result3);
+// const result3 = celsiusToFahrenheit(13);
+// console.log(result3);
 
-const result4 =celsiusToFahrenheit(20);
-console.log(result4);
+// const result4 =celsiusToFahrenheit(20);
+// console.log(result4);
 
-const result5 = celsiusToFahrenheit(30);
-console.log(result5);
+// const result5 = celsiusToFahrenheit(30);
+// console.log(result5);
 
-const result6 = celsiusToFahrenheit(100);
-console.log(result6);
+// const result6 = celsiusToFahrenheit(100);
+// console.log(result6);
 
-const result7 = celsiusToFahrenheit(90);
-console.log(result7);
+// const result7 = celsiusToFahrenheit(90);
+// console.log(result7);
 
 
 // ZB-TASK
