@@ -1,3 +1,45 @@
+// ZE-TASK
+// Masalani izohi: Shunday function yozing, uniygona string parametri mavjud bo'lsin. Bu function string tarkibidagi takrorlangan xarflarni olib tashlab qolgan qiymatni qaytarsin.
+// Masalan: removeDuplicate('stringg') return 'string' Yuqoridagi misolda, 'stringg' so'zi tarkibida 'g' harfi takrorlanmoqda funktsiyamiz shu bittadan ortiq takrorlangan harfni olib natijani qaytarmoqda.
+
+// Masalani yechimi: 
+
+function removeDuplicate(word: string): string {
+  return [...new Set(word)].join('');
+}
+
+const result1 = removeDuplicate("Hello");
+console.log(result1);
+
+const result2 = removeDuplicate("Stringg");
+console.log(result2);
+
+const result3 = removeDuplicate("Programming");
+console.log(result3);
+
+const result4 = removeDuplicate("Address");
+console.log(result4);
+
+const result5 = removeDuplicate("Success");
+console.log(result5);
+
+const result6 = removeDuplicate("Balloon");
+console.log(result6);
+
+const result7 = removeDuplicate("Bookshop");
+console.log(result7);
+
+const result8 = removeDuplicate("Engineer");
+console.log(result8);
+
+const result9 = removeDuplicate("Developer");
+console.log(result9);
+
+const result10 = removeDuplicate("Javascript");
+console.log(result10);
+
+
+
 // ZD-TASK
 // Masalani izohi: Shunday function yozing. Bu function o'ziga, parametr sifatida birinchi oddiy number, keyin yagona array va uchinchi bo'lib oddiy number qabul qilsin. Berilgan birinchi number parametr, arrayning tarkibida indeks bo'yicha hisoblanib, shu aniqlangan indeksni uchinchi number parametr bilan alashtirib, natija sifatida yangilangan arrayni qaytarsin.
 // Masalan: changeNumberInArray(1, [1,3,7,2], 2) return [1,2,7,2];
@@ -6,28 +48,28 @@
 
 // Masalani yechimi:
 
-function changeNumberInArray(i: number, arr: number[], val: number): number[] {
-  arr[i] = val;
-  return arr;
-}
+// function changeNumberInArray(i: number, arr: number[], val: number): number[] {
+//   arr[i] = val;
+//   return arr;
+// }
 
-const result1 = changeNumberInArray(1, [1, 3, 7, 2], 2);
-console.log(result1);
+// const result1 = changeNumberInArray(1, [1, 3, 7, 2], 2);
+// console.log(result1);
 
-const result2 = changeNumberInArray(1, [4, 5, 6, 7], 8);
-console.log(result2);
+// const result2 = changeNumberInArray(1, [4, 5, 6, 7], 8);
+// console.log(result2);
 
-const result3 = changeNumberInArray(2, [10, 12, 13, 14], 11);
-console.log(result3);
+// const result3 = changeNumberInArray(2, [10, 12, 13, 14], 11);
+// console.log(result3);
 
-const result4 = changeNumberInArray(0, [13, 14, 15, 16, 17, 18, 19], 11);
-console.log(result4);
+// const result4 = changeNumberInArray(0, [13, 14, 15, 16, 17, 18, 19], 11);
+// console.log(result4);
 
-const result5 = changeNumberInArray(3, [10, 20, 30, 40], 69);
-console.log(result5);
+// const result5 = changeNumberInArray(3, [10, 20, 30, 40], 69);
+// console.log(result5);
 
-const result6 = changeNumberInArray(4, [6, 7, 8, 9, 10], 13);
-console.log(result6);
+// const result6 = changeNumberInArray(4, [6, 7, 8, 9, 10], 13);
+// console.log(result6);
 
 
 // ZC-TASK
