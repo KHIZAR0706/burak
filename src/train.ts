@@ -1,42 +1,76 @@
+// ZF-TASK
+// MAsalani izohi: Shunday function yozing, uni string parametri bolsin. String ichidagi har bir sozni bosh harflarini katta harf qilib qaytarsin lekin 1 yoki 2 harfdan iborat sozlarni esa oz holicha qoldirsin.
+// Masalan: capitalizeWords('name should be a string') return 'Name Should be a String'
+
+
+// Masalani yechimi: 
+
+const capitalizeWords = (text: string): string =>
+  text.split(" ")
+     .map(word => word.length <= 3 ? word : word[0].toUpperCase() + word.slice(1))
+     .join(" ");
+
+const result1 = capitalizeWords("name should be a string");
+console.log(result1);
+
+const result2 = capitalizeWords("javascript");
+console.log(result2);
+
+const result3 = capitalizeWords("typescript");
+console.log(result3);
+
+const result4 = capitalizeWords("tashkent is the capital of uzbekistan");
+console.log(result4);
+
+const result5 = capitalizeWords("productpage screen component");
+console.log(result5);
+
+const result6 = capitalizeWords("orderpage screen component");
+console.log(result6);
+
+const result7 = capitalizeWords("homepage screen component");
+console.log(result7);
+
+
 // ZE-TASK
 // Masalani izohi: Shunday function yozing, uniygona string parametri mavjud bo'lsin. Bu function string tarkibidagi takrorlangan xarflarni olib tashlab qolgan qiymatni qaytarsin.
 // Masalan: removeDuplicate('stringg') return 'string' Yuqoridagi misolda, 'stringg' so'zi tarkibida 'g' harfi takrorlanmoqda funktsiyamiz shu bittadan ortiq takrorlangan harfni olib natijani qaytarmoqda.
 
 // Masalani yechimi: 
 
-function removeDuplicate(word: string): string {
-  return [...new Set(word)].join('');
-}
+// function removeDuplicate(word: string): string {
+//   return [...new Set(word)].join('');
+// }
 
-const result1 = removeDuplicate("Hello");
-console.log(result1);
+// const result1 = removeDuplicate("Hello");
+// console.log(result1);
 
-const result2 = removeDuplicate("Stringg");
-console.log(result2);
+// const result2 = removeDuplicate("Stringg");
+// console.log(result2);
 
-const result3 = removeDuplicate("Programming");
-console.log(result3);
+// const result3 = removeDuplicate("Programming");
+// console.log(result3);
 
-const result4 = removeDuplicate("Address");
-console.log(result4);
+// const result4 = removeDuplicate("Address");
+// console.log(result4);
 
-const result5 = removeDuplicate("Success");
-console.log(result5);
+// const result5 = removeDuplicate("Success");
+// console.log(result5);
 
-const result6 = removeDuplicate("Balloon");
-console.log(result6);
+// const result6 = removeDuplicate("Balloon");
+// console.log(result6);
 
-const result7 = removeDuplicate("Bookshop");
-console.log(result7);
+// const result7 = removeDuplicate("Bookshop");
+// console.log(result7);
 
-const result8 = removeDuplicate("Engineer");
-console.log(result8);
+// const result8 = removeDuplicate("Engineer");
+// console.log(result8);
 
-const result9 = removeDuplicate("Developer");
-console.log(result9);
+// const result9 = removeDuplicate("Developer");
+// console.log(result9);
 
-const result10 = removeDuplicate("Javascript");
-console.log(result10);
+// const result10 = removeDuplicate("Javascript");
+// console.log(result10);
 
 
 
