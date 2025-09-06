@@ -1,33 +1,69 @@
+// ZH-TASK
+// Masalani izohi: Shunday function yozing, u berilgan array parametrni ichidagi eng katta raqamgacha tushib qolgan raqamlarni bir arrayda qaytarsin. 
+// Masalan: findDisappearedNumbers([1, 3, 4, 7]) return [2, 5, 6]
+
+
+// Masalani yechimi: 
+
+function findDisappearedNumbers(arr: number[], i: number = 1, max: number = Math.max(...arr)): number[] {
+  if (i > max) return []; 
+  return (arr.includes(i) ? [] : [i]).concat(findDisappearedNumbers(arr, i + 1, max));
+};
+
+const result1 = findDisappearedNumbers([1, 3, 4, 7]);
+console.log(result1);
+
+const result2 = findDisappearedNumbers([2, 5, 6, 7, 9]);
+console.log(result2);
+
+const result3 = findDisappearedNumbers([10, 11, 13, 15, 17]);
+console.log(result3);
+
+const result4 = findDisappearedNumbers([4, 5, 7, 9, 10, 12]);
+console.log(result4);
+
+const result5 = findDisappearedNumbers([0, 1, 3, 5, 7, 9]);
+console.log(result5);
+
+const result6 = findDisappearedNumbers([2, 4, 6, 8, 10]);
+console.log(result6);
+
+const result7 = findDisappearedNumbers([4, 5, 6, 8, 9, 11]);
+console.log(result7);
+
+
+
+
 // ZG-TASK
 // Masalani izohi: Shunday function yozing, u berilgan string parametrni snake casega otkazib qaytarsin. 
 // Masalan: capitalizeWords('name should be a string') return 'name_should_be_a_string'
 
 // Masalani yechimi: 
 
-function toSnakeCase(word: string): string {
-  return word.trim().toLowerCase().replace(/\s+/g, "_");
-}
+// function toSnakeCase(word: string): string {
+//   return word.trim().toLowerCase().replace(/\s+/g, "_");
+// }
 
-const result1 = toSnakeCase("name should be a string");
-console.log(result1);
+// const result1 = toSnakeCase("name should be a string");
+// console.log(result1);
 
-const result2 = toSnakeCase("hello world");
-console.log(result2);
+// const result2 = toSnakeCase("hello world");
+// console.log(result2);
 
-const result3 = toSnakeCase("Tashkent is the capital of Uzbekistan");
-console.log(result3);
+// const result3 = toSnakeCase("Tashkent is the capital of Uzbekistan");
+// console.log(result3);
 
-const result4 = toSnakeCase("Programming is enjoyable");
-console.log(result4);
+// const result4 = toSnakeCase("Programming is enjoyable");
+// console.log(result4);
 
-const result5 = toSnakeCase("I love playing football");
-console.log(result5);
+// const result5 = toSnakeCase("I love playing football");
+// console.log(result5);
 
-const result6 = toSnakeCase("Yesterday I went to gym");
-console.log(result6);
+// const result6 = toSnakeCase("Yesterday I went to gym");
+// console.log(result6);
 
-const result7 = toSnakeCase("Barca is my favorite club");
-console.log(result7);
+// const result7 = toSnakeCase("Barca is my favorite club");
+// console.log(result7);
 
 
 
