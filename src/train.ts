@@ -1,26 +1,64 @@
+// ZJ-TASK
+// Masalani izohi: Shunday function yozing, u berilgan array ichidagi raqamlarni qiymatini hisoblab qaytarsin.
+// Masalan: reduceNestedArray([1, [1, 2, [4]]]); return 8;
+// Yuqoridagi misolda, array nested bo'lgan holdatda ham, bizning function ularning yig'indisini hisoblab qaytarmoqda.
+
+// Masalani yechimi: 
+
+function reduceNestedArray(arr: any[]): number {
+  return arr.reduce((sum, item) => 
+    sum + (Array.isArray(item) ? reduceNestedArray(item) : item), 0);
+}
+
+const result1 = reduceNestedArray([1, [1, 1, [4]]]);
+console.log(result1);
+
+const result2 = reduceNestedArray([5, [3, [2, 1, 8]]]);
+console.log(result2);
+
+const result3 = reduceNestedArray([[1], [1, [7]]]);
+console.log(result3);
+
+const result4 = reduceNestedArray([2, [ 5, [6]]]);
+console.log(result4);
+
+const result5 = reduceNestedArray([[7], [55], [7]]); 
+console.log(result5);
+
+const result6 = reduceNestedArray([35, [15, [20]]]);
+console.log(result6);
+
+const result7 = reduceNestedArray([1, [2, [3, [4, 5]]]]);
+console.log(result7);
+
+const result8 = reduceNestedArray([1, [1]]);
+console.log(result8);
+
+
+
 // ZI-TASK
 // Masalani izohi: Shundan function yozing, bu function 3 soniydan so'ng "Hello World!" so'zini qaytarsin.
 // Masalan: delayHelloWorld("Hello World"); return "Hello World";
 
 // Masalani yechimi: 
 
-function delay<T>(value: T, ms: number = 3000) {
-  return new Promise<T>(resolve => setTimeout(() => resolve(value), ms));
-}
+// function delay<T>(value: T, ms: number = 3000) {
+//   return new Promise<T>(resolve => setTimeout(() => resolve(value), ms));
+// }
 
-delay("Hello World!").then(console.log); // 1
+// delay("Hello World!").then(console.log); // 1
 
-delay("Javascript Basics").then(console.log); // 2
+// delay("Javascript Basics").then(console.log); // 2
 
-delay("Tashkent is expensive city").then(console.log); // 3
+// delay("Tashkent is expensive city").then(console.log); // 3
 
-delay("Programming is enjoyable").then(console.log); // 4
+// delay("Programming is enjoyable").then(console.log); // 4
 
-delay("I love playing football").then(console.log); //5
+// delay("I love playing football").then(console.log); //5
 
-delay("BWM is my dream car").then(console.log); // 6
+// delay("BWM is my dream car").then(console.log); // 6
 
-delay("Barca is my favorite club").then(console.log); // 7
+// delay("Barca is my favorite club").then(console.log); // 7
 
 
 
