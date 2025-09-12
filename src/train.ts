@@ -1,3 +1,32 @@
+// ZK-TASK 
+// Masalani izohi: Shunday function yozing, u har soniyada bir marta consolega 1 dan 5 gacha bolgan raqamlarni chop etsin va 5 soniyadan keyin ishini toxtatsin.
+// Masalan: printNumbers()
+
+// Masalani yechimi:
+
+function printNumbers(n: number): void {
+  let i = 1;
+  const id = setInterval(() => {
+    console.log(i++);
+    if (i > n) clearInterval(id);
+  }, 1000);
+}
+
+printNumbers(5);
+
+// printNumbers(6);
+
+// printNumbers(10);
+
+// printNumbers(13);
+
+// printNumbers(15);
+
+// printNumbers(19);
+
+// printNumbers(23);
+
+
 // ZJ-TASK
 // Masalani izohi: Shunday function yozing, u berilgan array ichidagi raqamlarni qiymatini hisoblab qaytarsin.
 // Masalan: reduceNestedArray([1, [1, 2, [4]]]); return 8;
@@ -5,34 +34,34 @@
 
 // Masalani yechimi: 
 
-function reduceNestedArray(arr: any[]): number {
-  return arr.reduce((sum, item) => 
-    sum + (Array.isArray(item) ? reduceNestedArray(item) : item), 0);
-}
+// function reduceNestedArray(arr: any[]): number {
+//   return arr.reduce((sum, item) => 
+//     sum + (Array.isArray(item) ? reduceNestedArray(item) : item), 0);
+// }
 
-const result1 = reduceNestedArray([1, [1, 1, [4]]]);
-console.log(result1);
+// const result1 = reduceNestedArray([1, [1, 1, [4]]]);
+// console.log(result1);
 
-const result2 = reduceNestedArray([5, [3, [2, 1, 8]]]);
-console.log(result2);
+// const result2 = reduceNestedArray([5, [3, [2, 1, 8]]]);
+// console.log(result2);
 
-const result3 = reduceNestedArray([[1], [1, [7]]]);
-console.log(result3);
+// const result3 = reduceNestedArray([[1], [1, [7]]]);
+// console.log(result3);
 
-const result4 = reduceNestedArray([2, [ 5, [6]]]);
-console.log(result4);
+// const result4 = reduceNestedArray([2, [ 5, [6]]]);
+// console.log(result4);
 
-const result5 = reduceNestedArray([[7], [55], [7]]); 
-console.log(result5);
+// const result5 = reduceNestedArray([[7], [55], [7]]); 
+// console.log(result5);
 
-const result6 = reduceNestedArray([35, [15, [20]]]);
-console.log(result6);
+// const result6 = reduceNestedArray([35, [15, [20]]]);
+// console.log(result6);
 
-const result7 = reduceNestedArray([1, [2, [3, [4, 5]]]]);
-console.log(result7);
+// const result7 = reduceNestedArray([1, [2, [3, [4, 5]]]]);
+// console.log(result7);
 
-const result8 = reduceNestedArray([1, [1]]);
-console.log(result8);
+// const result8 = reduceNestedArray([1, [1]]);
+// console.log(result8);
 
 
 
