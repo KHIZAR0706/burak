@@ -1,18 +1,50 @@
+// ZL-TASK
+// Masalani izohi: Shunday function yozing, u parametrda berilgan stringni kebab casega otkazib qaytarsin. Bosh harflarni kichik harflarga ham otkazsin.
+// Masalan: stringToKebab(“I love Kebab”) return “i-love-kebab”
+
+// Masalani yechimi:
+
+function stringToKebab(text: string): string {
+  return text.toLowerCase().trim().replace(/\s+/g, '-');
+}
+
+const result1 = stringToKebab("I love Kebab");
+console.log(result1);
+
+const result2 = stringToKebab("Hello World");
+console.log(result2);
+
+const result3 = stringToKebab("Javascript Basics");
+console.log(result3);
+
+const result4 = stringToKebab("Tashkent is the capital of Uzbekistan");
+console.log(result4);
+
+const result5 = stringToKebab("Barca is my favorite club");
+console.log(result5);
+
+const result6 = stringToKebab("I love playing football");
+console.log(result6);
+
+const result7 = stringToKebab("Programming is enjoyable");
+console.log(result7);
+
+
 // ZK-TASK 
 // Masalani izohi: Shunday function yozing, u har soniyada bir marta consolega 1 dan 5 gacha bolgan raqamlarni chop etsin va 5 soniyadan keyin ishini toxtatsin.
 // Masalan: printNumbers()
 
 // Masalani yechimi:
 
-function printNumbers(n: number): void {
-  let i = 1;
-  const id = setInterval(() => {
-    console.log(i++);
-    if (i > n) clearInterval(id);
-  }, 1000);
-}
+// function printNumbers(n: number): void {
+//   let i = 1;
+//   const id = setInterval(() => {
+//     console.log(i++);
+//     if (i > n) clearInterval(id);
+//   }, 1000);
+// }
 
-printNumbers(5);
+// printNumbers(5);
 
 // printNumbers(6);
 
