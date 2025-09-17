@@ -1,33 +1,75 @@
+// ZM-TASK
+// Masalani izohi: Shunday function yozing, va bu function parametr sifatida raqamlarni qabul qilsin. Bu function qabul qilingan raqamlarni orqasiga o'girib qaytarsin
+// Masalan: reverseInteger(123456789); return 987654321;
+// Yuqoridagi misolda, function kiritilgan raqamlarni orqasiga o'girib (reverse) qilib qaytarmoqda.
+
+// Masalani yechimi: 
+
+function reverseInteger(num: number): number {
+  return parseInt(num.toString().split('').reverse().join(''));
+}
+
+const result1 = reverseInteger(123456789);
+console.log(result1);
+
+const result2 = reverseInteger(23456789);
+console.log(result2);
+
+const result3 = reverseInteger(3456789);
+console.log(result3);
+
+const result4 = reverseInteger(456789);
+console.log(result4);
+
+const result5 = reverseInteger(56789);
+console.log(result5);
+
+const result6 = reverseInteger(6789);
+console.log(result6);
+
+const result7 = reverseInteger(789);
+console.log(result7);
+
+const result8 = reverseInteger(89);
+console.log(result8);
+
+const result9 = reverseInteger(34567);
+console.log(result9);
+
+const result10 = reverseInteger(2345);
+console.log(result10);
+
+
 // ZL-TASK
 // Masalani izohi: Shunday function yozing, u parametrda berilgan stringni kebab casega otkazib qaytarsin. Bosh harflarni kichik harflarga ham otkazsin.
 // Masalan: stringToKebab(“I love Kebab”) return “i-love-kebab”
 
 // Masalani yechimi:
 
-function stringToKebab(text: string): string {
-  return text.toLowerCase().trim().replace(/\s+/g, '-');
-}
+// function stringToKebab(text: string): string {
+//   return text.toLowerCase().trim().replace(/\s+/g, '-');
+// }
 
-const result1 = stringToKebab("I love Kebab");
-console.log(result1);
+// const result1 = stringToKebab("I love Kebab");
+// console.log(result1);
 
-const result2 = stringToKebab("Hello World");
-console.log(result2);
+// const result2 = stringToKebab("Hello World");
+// console.log(result2);
 
-const result3 = stringToKebab("Javascript Basics");
-console.log(result3);
+// const result3 = stringToKebab("Javascript Basics");
+// console.log(result3);
 
-const result4 = stringToKebab("Tashkent is the capital of Uzbekistan");
-console.log(result4);
+// const result4 = stringToKebab("Tashkent is the capital of Uzbekistan");
+// console.log(result4);
 
-const result5 = stringToKebab("Barca is my favorite club");
-console.log(result5);
+// const result5 = stringToKebab("Barca is my favorite club");
+// console.log(result5);
 
-const result6 = stringToKebab("I love playing football");
-console.log(result6);
+// const result6 = stringToKebab("I love playing football");
+// console.log(result6);
 
-const result7 = stringToKebab("Programming is enjoyable");
-console.log(result7);
+// const result7 = stringToKebab("Programming is enjoyable");
+// console.log(result7);
 
 
 // ZK-TASK 
