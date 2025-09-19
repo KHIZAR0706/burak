@@ -1,3 +1,38 @@
+// ZN-TASK
+// Masalani izohi: Shunday function yozing, uni array va number parametri bo'lsin. Function'ning vazifasi ikkinchi parametr'da berilgan raqam, birinchi
+// array parametr'ning indeksi bo'yicha hisoblanib, shu indeksgacha bo'lgan raqamlarni indeksdan tashqarida bo'lgan raqamlar bilan o'rnini almashtirib qaytarsin.
+// Masalan: rotateArray([1, 2, 3, 4, 5, 6], 3); return [5, 6, 1, 2, 3, 4];
+
+// Masalani yechimi: 
+
+function rotateArray(arr: number[], index: number): number[] {
+  return arr.slice(index + 1).concat(arr.splice(0, index + 1));
+}
+
+
+const result1 = rotateArray([1, 2, 3, 4, 5, 6, 7], 3);
+console.log(result1);
+
+const result2 = rotateArray([2, 3, 4, 5, 6, 7, 8, 9], 4);
+console.log(result2);
+
+const result3 = rotateArray([1, 2, 3, 4, 5, 6, 7, 8], 5);
+console.log(result3);
+
+const result4 = rotateArray([4, 5, 6, 7, 8, 9], 2);
+console.log(result4);
+
+const result5 = rotateArray([11, 12, 13, 14, 15, 16], 4);
+console.log(result5);
+
+const result6 = rotateArray([3, 6, 9, 12, 15, 18], 2);
+console.log(result6);
+
+const result7 = rotateArray([7, 8, 9, 11, 13, 15], 2);
+console.log(result7);
+
+ 
+
 // ZM-TASK
 // Masalani izohi: Shunday function yozing, va bu function parametr sifatida raqamlarni qabul qilsin. Bu function qabul qilingan raqamlarni orqasiga o'girib qaytarsin
 // Masalan: reverseInteger(123456789); return 987654321;
@@ -5,39 +40,39 @@
 
 // Masalani yechimi: 
 
-function reverseInteger(num: number): number {
-  return parseInt(num.toString().split('').reverse().join(''));
-}
+// function reverseInteger(num: number): number {
+//   return parseInt(num.toString().split('').reverse().join(''));
+// }
 
-const result1 = reverseInteger(123456789);
-console.log(result1);
+// const result1 = reverseInteger(123456789);
+// console.log(result1);
 
-const result2 = reverseInteger(23456789);
-console.log(result2);
+// const result2 = reverseInteger(23456789);
+// console.log(result2);
 
-const result3 = reverseInteger(3456789);
-console.log(result3);
+// const result3 = reverseInteger(3456789);
+// console.log(result3);
 
-const result4 = reverseInteger(456789);
-console.log(result4);
+// const result4 = reverseInteger(456789);
+// console.log(result4);
 
-const result5 = reverseInteger(56789);
-console.log(result5);
+// const result5 = reverseInteger(56789);
+// console.log(result5);
 
-const result6 = reverseInteger(6789);
-console.log(result6);
+// const result6 = reverseInteger(6789);
+// console.log(result6);
 
-const result7 = reverseInteger(789);
-console.log(result7);
+// const result7 = reverseInteger(789);
+// console.log(result7);
 
-const result8 = reverseInteger(89);
-console.log(result8);
+// const result8 = reverseInteger(89);
+// console.log(result8);
 
-const result9 = reverseInteger(34567);
-console.log(result9);
+// const result9 = reverseInteger(34567);
+// console.log(result9);
 
-const result10 = reverseInteger(2345);
-console.log(result10);
+// const result10 = reverseInteger(2345);
+// console.log(result10);
 
 
 // ZL-TASK
