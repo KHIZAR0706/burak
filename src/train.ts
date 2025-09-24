@@ -1,3 +1,39 @@
+// ZO-TASK
+// Msalani izohi: Shunday function yozing, u parametrdagi string ichidagi qavslar miqdori balansda ekanligini aniqlasin. Ya'ni ochish("(") va yopish(")") qavslar soni bir xil bolishi kerak.
+// Masalan: areParenthesesBalanced("string()ichida(qavslar)soni()balansda") return true
+
+
+// Masalani yechimi: 
+
+function areParenthesesBalanced(str: string): boolean {
+  let count = 0;
+
+  for (const char of str) {
+    if (char === "(") {
+      count++;
+    } else if (char === ")") {
+      count--;
+      if (count < 0) return false; 
+    }
+  }
+
+  return count === 0;
+}
+
+const result1 = areParenthesesBalanced("string()ichida(qavslar)soni()balansda");
+console.log(result1);
+
+const result2 = areParenthesesBalanced("((qavslar soni noto'g'ri)");
+console.log(result2);
+
+const result3 = areParenthesesBalanced("Hammasi joyida");
+console.log(result3);
+
+const result4 = areParenthesesBalanced("(bu)gapda(qavslar)sonida(kamchiliklar bor");
+console.log(result4);
+
+
+
 // ZN-TASK
 // Masalani izohi: Shunday function yozing, uni array va number parametri bo'lsin. Function'ning vazifasi ikkinchi parametr'da berilgan raqam, birinchi
 // array parametr'ning indeksi bo'yicha hisoblanib, shu indeksgacha bo'lgan raqamlarni indeksdan tashqarida bo'lgan raqamlar bilan o'rnini almashtirib qaytarsin.
@@ -5,31 +41,31 @@
 
 // Masalani yechimi: 
 
-function rotateArray(arr: number[], index: number): number[] {
-  return arr.slice(index + 1).concat(arr.splice(0, index + 1));
-}
+// function rotateArray(arr: number[], index: number): number[] {
+//   return arr.slice(index + 1).concat(arr.splice(0, index + 1));
+// }
 
 
-const result1 = rotateArray([1, 2, 3, 4, 5, 6, 7], 3);
-console.log(result1);
+// const result1 = rotateArray([1, 2, 3, 4, 5, 6, 7], 3);
+// console.log(result1);
 
-const result2 = rotateArray([2, 3, 4, 5, 6, 7, 8, 9], 4);
-console.log(result2);
+// const result2 = rotateArray([2, 3, 4, 5, 6, 7, 8, 9], 4);
+// console.log(result2);
 
-const result3 = rotateArray([1, 2, 3, 4, 5, 6, 7, 8], 5);
-console.log(result3);
+// const result3 = rotateArray([1, 2, 3, 4, 5, 6, 7, 8], 5);
+// console.log(result3);
 
-const result4 = rotateArray([4, 5, 6, 7, 8, 9], 2);
-console.log(result4);
+// const result4 = rotateArray([4, 5, 6, 7, 8, 9], 2);
+// console.log(result4);
 
-const result5 = rotateArray([11, 12, 13, 14, 15, 16], 4);
-console.log(result5);
+// const result5 = rotateArray([11, 12, 13, 14, 15, 16], 4);
+// console.log(result5);
 
-const result6 = rotateArray([3, 6, 9, 12, 15, 18], 2);
-console.log(result6);
+// const result6 = rotateArray([3, 6, 9, 12, 15, 18], 2);
+// console.log(result6);
 
-const result7 = rotateArray([7, 8, 9, 11, 13, 15], 2);
-console.log(result7);
+// const result7 = rotateArray([7, 8, 9, 11, 13, 15], 2);
+// console.log(result7);
 
  
 
