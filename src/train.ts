@@ -1,3 +1,30 @@
+// ZP-TASK
+// Masalani izohi: Shunday function yozing, u parametridagi string ichidagi raqam va sonlarni sonini sanasin.
+// Masalan: countNumberAndLetters(“string152%\¥”) return {number:3, letter:6}
+
+
+// Masalani yechimi: 
+
+function countNumberAndLetters(str: string) {
+  return {
+    number: (str.match(/\d/g) || []).length,
+    letter: (str.match(/[a-zA-Z]/g) || []).length
+  };
+}
+
+const result1 = countNumberAndLetters("string152%\¥");
+console.log(result1);
+
+const result2 = countNumberAndLetters("hello123world13!");
+console.log(result2);
+
+const result3 = countNumberAndLetters("java13script98$");
+console.log(result3);
+
+const result4 = countNumberAndLetters("leo10messigoat10!10");
+console.log(result4);
+
+
 // ZO-TASK
 // Msalani izohi: Shunday function yozing, u parametrdagi string ichidagi qavslar miqdori balansda ekanligini aniqlasin. Ya'ni ochish("(") va yopish(")") qavslar soni bir xil bolishi kerak.
 // Masalan: areParenthesesBalanced("string()ichida(qavslar)soni()balansda") return true
@@ -5,32 +32,32 @@
 
 // Masalani yechimi: 
 
-function areParenthesesBalanced(str: string): boolean {
-  let count = 0;
+// function areParenthesesBalanced(str: string): boolean {
+//   let count = 0;
 
-  for (const char of str) {
-    if (char === "(") {
-      count++;
-    } else if (char === ")") {
-      count--;
-      if (count < 0) return false; 
-    }
-  }
+//   for (const char of str) {
+//     if (char === "(") {
+//       count++;
+//     } else if (char === ")") {
+//       count--;
+//       if (count < 0) return false; 
+//     }
+//   }
 
-  return count === 0;
-}
+//   return count === 0;
+// }
 
-const result1 = areParenthesesBalanced("string()ichida(qavslar)soni()balansda");
-console.log(result1);
+// const result1 = areParenthesesBalanced("string()ichida(qavslar)soni()balansda");
+// console.log(result1);
 
-const result2 = areParenthesesBalanced("((qavslar soni noto'g'ri)");
-console.log(result2);
+// const result2 = areParenthesesBalanced("((qavslar soni noto'g'ri)");
+// console.log(result2);
 
-const result3 = areParenthesesBalanced("Hammasi joyida");
-console.log(result3);
+// const result3 = areParenthesesBalanced("Hammasi joyida");
+// console.log(result3);
 
-const result4 = areParenthesesBalanced("(bu)gapda(qavslar)sonida(kamchiliklar bor");
-console.log(result4);
+// const result4 = areParenthesesBalanced("(bu)gapda(qavslar)sonida(kamchiliklar bor");
+// console.log(result4);
 
 
 
