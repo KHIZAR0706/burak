@@ -1,44 +1,80 @@
+// ZR-TASK
+// Masalani izohi: Shunday function yozing, u 2 ta array parametr qabul qilsin.
+// Siz bu ikki arrayning qiymatlari o'xshash bo'lishini (ya'ni, ularning barcha elementlari bir xil bo'lishini) tekshirishingiz kerak.
+// Masalan: areArraysEqual([1, 2, 3], [3, 1, 2]) // true
+// areArraysEqual([1, 2, 3], [3, 1, 2, 1]) // true
+// areArraysEqual([1, 2, 3], [4, 1, 2]) // false
+
+// Masalani yechimi: 
+
+function areArraysEqual(arr1: number[], arr2: number[]): boolean {
+  return [...new Set(arr1)].every(num => arr2.includes(num)) && [...new Set(arr2)].every(num => arr1.includes(num));
+}
+
+const result1 = areArraysEqual([1, 2, 3], [3, 1, 2]);
+console.log(result1);
+
+const result2 = areArraysEqual([1, 2, 3], [3, 1, 2, 1]);
+console.log(result2);
+
+const result3 = areArraysEqual([1, 2, 3], [4, 1, 2]);
+console.log(result3);
+
+const result4 = areArraysEqual([13, 14, 15], [14, 15, 13]);
+console.log(result4);
+
+const result5 = areArraysEqual([100, 113, 200], [113, 200, 201]);
+console.log(result5);
+
+const result6 = areArraysEqual([68, 69, 70], [70, 68, 69]);
+console.log(result6);
+
+const result7 = areArraysEqual([2, 4, 3, 6, 7], [4, 3, 2, 7]);
+console.log(result7);
+
+
+
 // ZQ-TASK
 // Masalani izohi: Shunday function yozing, u parametridagi array ichida 2 marta qaytarilgan sonlarni alohida araryda qaytarsin.
 // Masalan: findDuplicates([1,2,3,4,5,4,3,4]) return [3, 4]
 
 // Masalani yechimi: 
 
-function findDuplicatesSet(arr: number[]): number[] {
-  const seen = new Set<number>(),   
-    duplicates = new Set<number>();  
+// function findDuplicatesSet(arr: number[]): number[] {
+//   const seen = new Set<number>(),   
+//     duplicates = new Set<number>();  
 
-  for (const num of arr) {
-    if (seen.has(num)) {
-      duplicates.add(num);  
-    } else {
-      seen.add(num);         
-    }
-  }
+//   for (const num of arr) {
+//     if (seen.has(num)) {
+//       duplicates.add(num);  
+//     } else {
+//       seen.add(num);         
+//     }
+//   }
 
-  return Array.from(duplicates); 
-}
+//   return Array.from(duplicates); 
+// }
 
-const result1 = findDuplicatesSet([1, 2, 3, 4, 5, 4, 3, 4]);   // 4, 3
-console.log(result1);
+// const result1 = findDuplicatesSet([1, 2, 3, 4, 5, 4, 3, 4]);   // 4, 3
+// console.log(result1);
 
-const result2 = findDuplicatesSet([10, 11, 13, 19, 13, 14, 19, 19]);  // 13, 19  
-console.log(result2);
+// const result2 = findDuplicatesSet([10, 11, 13, 19, 13, 14, 19, 19]);  // 13, 19  
+// console.log(result2);
 
-const result3 = findDuplicatesSet([5, 6, 7, 7, 6, 8, 9, 7]);  // 7, 6
-console.log(result3);
+// const result3 = findDuplicatesSet([5, 6, 7, 7, 6, 8, 9, 7]);  // 7, 6
+// console.log(result3);
 
-const result4 = findDuplicatesSet([2, 3, 4, 5, 5, 6, 8, 9, 4, 5]);  // 5, 4
-console.log(result4);
+// const result4 = findDuplicatesSet([2, 3, 4, 5, 5, 6, 8, 9, 4, 5]);  // 5, 4
+// console.log(result4);
 
-const result5 = findDuplicatesSet([20, 21, 20, 23, 22, 24, 22]);  // 20, 22
-console.log(result5);
+// const result5 = findDuplicatesSet([20, 21, 20, 23, 22, 24, 22]);  // 20, 22
+// console.log(result5);
 
-const result6 = findDuplicatesSet([30, 33, 35, 44, 45, 68, 33, 57, 68]);  // 33, 68
-console.log(result6);
+// const result6 = findDuplicatesSet([30, 33, 35, 44, 45, 68, 33, 57, 68]);  // 33, 68
+// console.log(result6);
 
-const result7 = findDuplicatesSet([99, 98, 99, 100, 101, 100]);  // 99, 100
-console.log(result7);
+// const result7 = findDuplicatesSet([99, 98, 99, 100, 101, 100]);  // 99, 100
+// console.log(result7);
 
 
 
