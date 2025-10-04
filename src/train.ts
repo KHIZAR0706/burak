@@ -1,3 +1,28 @@
+// ZS-TASK
+// Masalani izohi: Shunday function yozing, bu function parametrdagi array ichida bir marotaba takrorlangan element'ni qaytarsin
+// Masalan: singleNumber([4, 2, 1, 2, 1]); return 4;
+
+// Masalani yechimi: 
+
+const singleNumber = (nums: number[]): number =>
+  nums.find(num => nums.indexOf(num) === nums.lastIndexOf(num))!;
+
+console.log(singleNumber([4, 2, 1, 2, 1]));
+
+console.log(singleNumber([10, 1, 3, 1, 3]));
+
+console.log(singleNumber([13, 44, 44, 13, 98]));
+
+console.log(singleNumber([7, 6, 7, 6, 13]));
+
+console.log(singleNumber([8, 9, 10, 9, 10]));
+
+console.log(singleNumber([7, 3, 5, 3, 7]));
+
+console.log(singleNumber([100, 110, 100, 200, 110]));
+
+
+
 // ZR-TASK
 // Masalani izohi: Shunday function yozing, u 2 ta array parametr qabul qilsin.
 // Siz bu ikki arrayning qiymatlari o'xshash bo'lishini (ya'ni, ularning barcha elementlari bir xil bo'lishini) tekshirishingiz kerak.
@@ -7,30 +32,30 @@
 
 // Masalani yechimi: 
 
-function areArraysEqual(arr1: number[], arr2: number[]): boolean {
-  return [...new Set(arr1)].every(num => arr2.includes(num)) && [...new Set(arr2)].every(num => arr1.includes(num));
-}
+// function areArraysEqual(arr1: number[], arr2: number[]): boolean {
+//   return [...new Set(arr1)].every(num => arr2.includes(num)) && [...new Set(arr2)].every(num => arr1.includes(num));
+// }
 
-const result1 = areArraysEqual([1, 2, 3], [3, 1, 2]);
-console.log(result1);
+// const result1 = areArraysEqual([1, 2, 3], [3, 1, 2]);
+// console.log(result1);
 
-const result2 = areArraysEqual([1, 2, 3], [3, 1, 2, 1]);
-console.log(result2);
+// const result2 = areArraysEqual([1, 2, 3], [3, 1, 2, 1]);
+// console.log(result2);
 
-const result3 = areArraysEqual([1, 2, 3], [4, 1, 2]);
-console.log(result3);
+// const result3 = areArraysEqual([1, 2, 3], [4, 1, 2]);
+// console.log(result3);
 
-const result4 = areArraysEqual([13, 14, 15], [14, 15, 13]);
-console.log(result4);
+// const result4 = areArraysEqual([13, 14, 15], [14, 15, 13]);
+// console.log(result4);
 
-const result5 = areArraysEqual([100, 113, 200], [113, 200, 201]);
-console.log(result5);
+// const result5 = areArraysEqual([100, 113, 200], [113, 200, 201]);
+// console.log(result5);
 
-const result6 = areArraysEqual([68, 69, 70], [70, 68, 69]);
-console.log(result6);
+// const result6 = areArraysEqual([68, 69, 70], [70, 68, 69]);
+// console.log(result6);
 
-const result7 = areArraysEqual([2, 4, 3, 6, 7], [4, 3, 2, 7]);
-console.log(result7);
+// const result7 = areArraysEqual([2, 4, 3, 6, 7], [4, 3, 2, 7]);
+// console.log(result7);
 
 
 
