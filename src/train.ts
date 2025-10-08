@@ -1,25 +1,73 @@
+// ZT-TASK
+// Masalani izohi: Shunday function yozing, u parametridagi string ichida 1 martadan ortiq qaytarilmagan birinchi harf indeksini qaytarsin.
+// Masalan: firstUniqueCharIndex(“stamp”) return 0
+
+import { isReadable } from "stream";
+
+// Masalani yechimi: 
+
+function firstUniqueCharIndex(word: string): number {
+  const freq = new Map<string, number>();
+
+  for (const letter of word) {
+    freq.set(letter, (freq.get(letter) ?? 0) + 1);
+  }
+
+  for (let i = 0; i < word.length; i++) {
+    if (freq.get(word[i]) === 1) return i;
+  }
+
+  return -1;
+}
+
+const result0 = firstUniqueCharIndex("reappear");
+console.log(result0);
+
+const result1 = firstUniqueCharIndex("stamp");
+console.log(result1);
+
+const result2 = firstUniqueCharIndex("swiss");
+console.log(result2);
+
+const result3 = firstUniqueCharIndex("levels");
+console.log(result3);
+
+const result4 = firstUniqueCharIndex("jjavascript");
+console.log(result4);
+
+const result5 = firstUniqueCharIndex("google");
+console.log(result5);
+
+const result6 = firstUniqueCharIndex("bbuutert");
+console.log(result6);
+
+const result7 = firstUniqueCharIndex("kkeeaab");
+console.log(result7);
+
+
+
 // ZS-TASK
 // Masalani izohi: Shunday function yozing, bu function parametrdagi array ichida bir marotaba takrorlangan element'ni qaytarsin
 // Masalan: singleNumber([4, 2, 1, 2, 1]); return 4;
 
 // Masalani yechimi: 
 
-const singleNumber = (nums: number[]): number =>
-  nums.find(num => nums.indexOf(num) === nums.lastIndexOf(num))!;
+// const singleNumber = (nums: number[]): number =>
+//   nums.find(num => nums.indexOf(num) === nums.lastIndexOf(num))!;
 
-console.log(singleNumber([4, 2, 1, 2, 1]));
+// console.log(singleNumber([4, 2, 1, 2, 1]));
 
-console.log(singleNumber([10, 1, 3, 1, 3]));
+// console.log(singleNumber([10, 1, 3, 1, 3]));
 
-console.log(singleNumber([13, 44, 44, 13, 98]));
+// console.log(singleNumber([13, 44, 44, 13, 98]));
 
-console.log(singleNumber([7, 6, 7, 6, 13]));
+// console.log(singleNumber([7, 6, 7, 6, 13]));
 
-console.log(singleNumber([8, 9, 10, 9, 10]));
+// console.log(singleNumber([8, 9, 10, 9, 10]));
 
-console.log(singleNumber([7, 3, 5, 3, 7]));
+// console.log(singleNumber([7, 3, 5, 3, 7]));
 
-console.log(singleNumber([100, 110, 100, 200, 110]));
+// console.log(singleNumber([100, 110, 100, 200, 110]));
 
 
 
