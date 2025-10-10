@@ -1,48 +1,81 @@
+// ZU-TASK
+// Masalani izohi: Shunday function yozing, u parametridagi array ichida takrorlanmagan raqamlar yig'indisini qaytarsin.
+// Masalan: sumOfUnique([1,2,3,2]) return 4 
+
+// Masalani yechimi:
+
+function sumOfUnique(nums: number[]): number {
+  return nums
+    .filter(num => nums.indexOf(num) === nums.lastIndexOf(num))
+    .reduce((sum, num) => sum + num, 0);
+}
+
+const result1 = sumOfUnique([1, 2, 3, 2]);
+console.log(result1);
+
+const result2 = sumOfUnique([4, 3, 1, 2, 1, 2]);
+console.log(result2);
+
+const result3 = sumOfUnique([5, 1, 4, 2, 4, 2]);
+console.log(result3);
+
+const result4 = sumOfUnique([6, 7, 5, 5, 3, 3]);
+console.log(result4);
+
+const result5 = sumOfUnique([17, 2, 11, 10, 11, 10]);
+console.log(result5);
+
+const result6 = sumOfUnique([66, 2, 3, 4, 4, 3]);
+console.log(result6);
+
+const result7 = sumOfUnique([69, 1, 13, 13]);
+console.log(result7);
+
+
+
 // ZT-TASK
 // Masalani izohi: Shunday function yozing, u parametridagi string ichida 1 martadan ortiq qaytarilmagan birinchi harf indeksini qaytarsin.
 // Masalan: firstUniqueCharIndex(“stamp”) return 0
 
-import { isReadable } from "stream";
-
 // Masalani yechimi: 
 
-function firstUniqueCharIndex(word: string): number {
-  const freq = new Map<string, number>();
+// function firstUniqueCharIndex(word: string): number {
+//   const freq = new Map<string, number>();
 
-  for (const letter of word) {
-    freq.set(letter, (freq.get(letter) ?? 0) + 1);
-  }
+//   for (const letter of word) {
+//     freq.set(letter, (freq.get(letter) ?? 0) + 1);
+//   }
 
-  for (let i = 0; i < word.length; i++) {
-    if (freq.get(word[i]) === 1) return i;
-  }
+//   for (let i = 0; i < word.length; i++) {
+//     if (freq.get(word[i]) === 1) return i;
+//   }
 
-  return -1;
-}
+//   return -1;
+// }
 
-const result0 = firstUniqueCharIndex("reappear");
-console.log(result0);
+// const result0 = firstUniqueCharIndex("reappear");
+// console.log(result0);
 
-const result1 = firstUniqueCharIndex("stamp");
-console.log(result1);
+// const result1 = firstUniqueCharIndex("stamp");
+// console.log(result1);
 
-const result2 = firstUniqueCharIndex("swiss");
-console.log(result2);
+// const result2 = firstUniqueCharIndex("swiss");
+// console.log(result2);
 
-const result3 = firstUniqueCharIndex("levels");
-console.log(result3);
+// const result3 = firstUniqueCharIndex("levels");
+// console.log(result3);
 
-const result4 = firstUniqueCharIndex("jjavascript");
-console.log(result4);
+// const result4 = firstUniqueCharIndex("jjavascript");
+// console.log(result4);
 
-const result5 = firstUniqueCharIndex("google");
-console.log(result5);
+// const result5 = firstUniqueCharIndex("google");
+// console.log(result5);
 
-const result6 = firstUniqueCharIndex("bbuutert");
-console.log(result6);
+// const result6 = firstUniqueCharIndex("bbuutert");
+// console.log(result6);
 
-const result7 = firstUniqueCharIndex("kkeeaab");
-console.log(result7);
+// const result7 = firstUniqueCharIndex("kkeeaab");
+// console.log(result7);
 
 
 
